@@ -31,7 +31,7 @@ body
 
 .gap-me
 {
-    gap: 15px;
+    gap: 35px;
 }
 
 .justi-center
@@ -60,6 +60,11 @@ body
     background: rgba(0, 0, 0, 0);
     /* background-color: rgba(68, 112, 112, 0.533); */
     /* color: rgb(255, 255, 255); */
+}
+
+.nav-me h2
+{
+    font-size: 2.5rem;
 }
 
 section
