@@ -2,6 +2,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 
 html
@@ -56,6 +57,12 @@ body
     width: 100%;
     height: auto;
     display: block;
+}
+
+.blog
+{
+    width: clamp(460px, 80%, 1100px);
+    justify-content: flex-end;
 }
 
 .gap-12
