@@ -4,75 +4,54 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenApps</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style/style.css">
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Header -->
-  <header class="bg-gray-900 text-white py-6">
-    <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
-      <h1 class="text-2xl font-bold">BenApps</h1>
-      <nav class="space-x-4">
-        <a href="#about" class="hover:text-gray-300">À propos</a>
-        <a href="#services" class="hover:text-gray-300">Services</a>
-        <a href="#contact" class="hover:text-gray-300">Contact</a>
-      </nav>
-    </div>
-  </header>
+<body class="">
 
   <!-- Hero Section -->
-  <section class="bg-gray-100 py-20 text-center">
-    <h2 class="text-4xl font-bold mb-4">Bienvenue sur mon site vitrine</h2>
-    <p class="text-lg text-gray-600">Un site simple, moderne et responsive</p>
+  <section class="principal">
+
+    <div class="nav-me">
+        <h2>BenApps</h2>
+
+        <div class="blog f-center gap-me">
+            <a href="#projets" class="btn-a">Mes projets</a>
+            <a href="#about" class="btn-a">A propos</a>
+            <a href="#contact" class="btn-a">Contact</a>
+        </div>
+    </div>
+
+
+
+    <div class="container">
+        <div class="explain">
+            <h2>Benjamin FERRANDEZ</h2>
+            <span>Je explique ma vie ici en mode juste comme ca pour tester la moula tu connais les baiilles</span>
+        </div>
+        <div class="img-ben-container">
+            <img src="img/ben.png" alt="" class="img-ben">
+        </div>
+    </div>
   </section>
 
   <!-- About Section -->
-  <section id="about" class="py-16 max-w-4xl mx-auto px-4">
-    <h3 class="text-3xl font-semibold mb-4">À propos</h3>
-    <p class="text-gray-700">Je suis un développeur passionné, spécialisé en PHP, HTML et CSS. Ce site présente mes services et permet de me contacter facilement.</p>
+  <section id="projets" class="">
+    ici
   </section>
 
   <!-- Services Section -->
-  <section id="services" class="bg-gray-50 py-16 max-w-6xl mx-auto px-4">
-    <h3 class="text-3xl font-semibold mb-8 text-center">Mes Services</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-bold text-xl mb-2">Développement Web</h4>
-        <p class="text-gray-600">Création de sites web sur mesure avec les meilleures pratiques.</p>
-      </div>
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-bold text-xl mb-2">Responsive Design</h4>
-        <p class="text-gray-600">Sites adaptables à tous les supports (mobile, tablette, desktop).</p>
-      </div>
-      <div class="p-6 bg-white shadow rounded">
-        <h4 class="font-bold text-xl mb-2">Formulaires & Intégration</h4>
-        <p class="text-gray-600">Formulaires fonctionnels et intégration API (ex: emailing).</p>
-      </div>
-    </div>
+  <section id="about" class="">
+    ici about
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="py-16 max-w-4xl mx-auto px-4">
-    <h3 class="text-3xl font-semibold mb-8 text-center">Contactez-moi</h3>
-    <form action="https://formspree.io/f/your-id" method="POST" class="space-y-6">
-      <div>
-        <label for="name" class="block mb-1 font-medium">Nom</label>
-        <input type="text" id="name" name="name" required class="w-full border rounded px-4 py-2">
-      </div>
-      <div>
-        <label for="email" class="block mb-1 font-medium">Email</label>
-        <input type="email" id="email" name="email" required class="w-full border rounded px-4 py-2">
-      </div>
-      <div>
-        <label for="message" class="block mb-1 font-medium">Message</label>
-        <textarea id="message" name="message" rows="5" required class="w-full border rounded px-4 py-2"></textarea>
-      </div>
-      <button type="submit" class="bg-gray-900 text-white px-6 py-2 rounded hover:bg-gray-800">Envoyer</button>
-    </form>
+  <section id="contact" class="">
+    ici contact
   </section>
 
   <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-6 mt-16">
-    <p>&copy; 2025 MonSite. Tous droits réservés.</p>
+  <footer class="">
+    <p>&copy; 2025 BenApps. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
