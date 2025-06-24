@@ -150,8 +150,7 @@ body
 .fond_1
 {
     object-fit: cover;
-    /* background : no-repeat center url("/img/fond_1.jpg"); */
-    background : no-repeat center url("/img/fond_1.png");
+    background : no-repeat center url("../img/fond_1.png");
 }
 
 .fond_1::before {
