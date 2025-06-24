@@ -1,14 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
     var next = document.getElementById('carrousel');
-
-
-
     const faders = document.querySelectorAll('.fade-in');
-
     const options = {
         threshold: 0.1
     };
-
+    const sections = ['principal', 'about', 'projets', 'blog'];
+    const scrollButtonA = document.getElementById('scroll-button');
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -21,8 +18,26 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(section);
     });
 
+    const scrollUpBtn = document.getElementById('scroll-button-top');
+    const principalSection = document.getElementById('principal');
+    
+    if (scrollUpBtn && principalSection) {
+        const visibilityObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                // On cache le bouton haut quand la section 'principal' est visible à moitié ou plus
+                if (entry.isIntersecting) {
+                    scrollUpBtn.classList.remove('appear');
+                } else {
+                    scrollUpBtn.classList.add('appear');
+                }
+            });
+        }, {
+            root: null,
+            threshold: 0.5
+        });
 
-
+        visibilityObserver.observe(principalSection);
+    }
 
     
     var images = [
@@ -43,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Appliquer transition aux images
     images.forEach(img => {
-        img.style.transition = "opacity 0.1s ease";
+        img.style.transition = "opacity 0.3s ease";
         img.style.opacity = 0;
         img.style.display = "none";
     });
@@ -88,6 +103,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
             images[currentIndex].style.opacity = 1;
             texts[currentIndex].style.opacity = 1;
-        }, 100);
+        }, 300);
     }
+
+    scrollButtonA.addEventListener('click', () => {
+    const scrollPosition = window.scrollY + window.innerHeight / 2; 
+
+    let nextSection = null;
+
+    for (const id of sections) {
+        const elem = document.getElementById(id);
+        const elemTop = elem.getBoundingClientRect().top + window.scrollY;
+
+        if (elemTop > scrollPosition) {
+            nextSection = elem;
+            break;
+        }
+    }
+
+    if (!nextSection) {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+        nextSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+
+
 });

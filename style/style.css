@@ -5,22 +5,32 @@
     scroll-behavior: smooth;
 }
 
-html
-{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 13px;
+html {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 15px;
+        width: 100%;
+    height: 100vh;
 }
 
 body
 {
     width: 100%;
     height: 100vh;
+    overflow: auto; /* permet le scroll */
+    scrollbar-width: none; /* Firefox */
 }
 
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+  background: transparent;
+}
 .fade-in {
     opacity: 0;
     transform: translateY(20px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 2s ease, transform 1.4s ease;
 }
 
 .fade-in.visible {
@@ -60,7 +70,7 @@ body
     width: 100%;         
     max-width: 400px;
     padding: 10px;
-    object-fit: contain;
+    /* object-fit: contain; */
 }
 
 .img-b
@@ -88,21 +98,19 @@ body
 
 .container
 {
-    /* width: 70%;
-    height: 50%; */
     width: 75%;
     height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* flex-grow: 1; */
     border: 2px solid #ffffff;
     padding: 10px;
+    gap: 25px;
 }
 
 .hs
 {
-    background-color: #0000001f;
+    background-color:#e34e2c8c;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -115,7 +123,7 @@ body
 
 .explain
 {
-    font-size: 1.7rem;
+    /* font-size: 1.7rem; */
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -160,11 +168,11 @@ body
 
 .fond_1
 {
-    object-fit: cover;
-    background : no-repeat center url("../img/fond_1.png");
+    /* object-fit: cover; */
+    /* background : no-repeat center url("../img/fond_1.png"); */
 }
 
-.fond_1::before {
+/* .fond_1::before {
     content: "";
     position: absolute;
     top: 0;
@@ -174,12 +182,13 @@ body
     backdrop-filter: blur(1.5px);
     background-color: rgb(255 255 255 / 71%);
     z-index: 1;
-}
+} */
 
 .section-general
 {
     width: 100%;
     height: 100%;
+    position: relative;
 }
 
 .fl-col
@@ -240,25 +249,16 @@ body
 .all-about 
 {
     display: flex;
-    /* flex-direction: column; */
-    /* justify-content: space-evenly; */
-    /* align-items: center; */
     gap: 15px;
-    /* padding: 12px; */
-    /* width: 80%; */
     height: 70%;
     width: clamp(340px, 75%, 1050px);
     z-index: 3;
     background-color: white;
-    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
-
-    /* border: 1px solid black; */
 }
 
 .about-1
 {
     flex: 4;
-    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     padding: 12px;
@@ -328,30 +328,28 @@ body
 
 .image-bg-projets
 {
-    width: clamp(360px, 80%, 650px);
+    /* width: clamp(360px, 80%, 650px);
     min-height: 750px;
-    /* border: 3px solid #00000057; */
     opacity: 0.7;
     background-image: url("../img/fond_er.png");
     border-radius: 8px;
     position: absolute;
     right: 07%;
     z-index: 1;
-    transform: rotate(180deg);
+    transform: rotate(180deg); */
 }
 
 .image-bg-about
 {
-    width: clamp(360px, 80%, 650px);
+    /* width: clamp(360px, 80%, 650px);
     min-height: 750px;
-    /* border: 3px solid #00000057; */
     opacity: 0.2;
     background-image: url("../img/fond_ef.png");
     border-radius: 8px;
     position: absolute;
     left: 07%;
     z-index: 1;
-    transform: rotate(180deg);
+    transform: rotate(180deg); */
 }
 
 .projet-1
@@ -405,7 +403,7 @@ body
 .explain-me
 {
     text-align: justify;
-    font-family: 'Georgia', serif;
+    /* font-family: 'Georgia', serif; */
     font-size: 1.1rem;
     line-height: 1.8;
     letter-spacing: 0.3px;
@@ -425,12 +423,12 @@ body
 
 .arrow
 {
-    width: 55px; 
+    width: 40px; 
     text-align: center;
     margin:  0 auto;
     cursor: pointer;
     position: absolute;
-    bottom: 25px;
+    bottom: 5px;
     right: 25px;
 }
 
@@ -447,4 +445,65 @@ body
 .ul-me
 {
     list-style: none;
+}
+
+
+.can-scroll-down {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999; /* Assure que rien ne passe devant */
+  pointer-events: none; /* Optionnel : si tu veux qu'elle ne bloque pas les clics derrière */
+}
+
+.arrow-down {
+  width: 32px;
+  height: auto;
+  opacity: 0.7;
+  animation: bounce 1.4s infinite;
+  pointer-events: auto; /* Si tu veux garder le clic sur la flèche */
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes bounce-top {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.appear {
+    display: block!important;
+}
+
+.can-scroll-up {
+  position: fixed;
+  top: 25px; 
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999;
+  cursor: pointer;
+}
+
+.arrow-up {
+  width: 32px;
+  display: none;
+  height: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+  animation: bounce-top 1.4s infinite;
+  pointer-events: auto;
+  cursor: pointer;
 }
