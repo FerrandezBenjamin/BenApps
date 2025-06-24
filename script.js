@@ -6,6 +6,9 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     const sections = ['principal', 'about', 'projets', 'blog'];
     const scrollButtonA = document.getElementById('scroll-button');
+    const scrollButtonT = document.getElementById('scroll-button-top');
+
+
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -107,26 +110,49 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     scrollButtonA.addEventListener('click', () => {
-    const scrollPosition = window.scrollY + window.innerHeight / 2; 
+        const scrollPosition = window.scrollY + window.innerHeight / 2; 
 
-    let nextSection = null;
+        let nextSection = null;
 
-    for (const id of sections) {
-        const elem = document.getElementById(id);
-        const elemTop = elem.getBoundingClientRect().top + window.scrollY;
+        for (const id of sections) {
+            const elem = document.getElementById(id);
+            const elemTop = elem.getBoundingClientRect().top + window.scrollY;
 
-        if (elemTop > scrollPosition) {
-            nextSection = elem;
-            break;
+            if (elemTop > scrollPosition) {
+                nextSection = elem;
+                break;
+            }
         }
-    }
 
-    if (!nextSection) {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-        nextSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  });
+        if (!nextSection) {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        } else {
+            nextSection.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    scrollButtonT.addEventListener('click', () => {
+        const scrollPosition = window.scrollY + window.innerHeight / 2;
+
+        let previousSection = null;
+
+        for (let i = sections.length - 1; i >= 0; i--) {
+            const elem = document.getElementById(sections[i]);
+            const elemBottom = elem.getBoundingClientRect().bottom + window.scrollY;
+
+            if (elemBottom < scrollPosition) {
+                previousSection = elem;
+                break;
+            }
+        }
+
+        if (previousSection) {
+            previousSection.scrollIntoView({ behavior: 'smooth' });
+        } else {
+            // Si aucune section trouvée au-dessus, on reste en haut
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    });
 
 
 });
