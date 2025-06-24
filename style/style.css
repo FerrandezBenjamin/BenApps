@@ -7,7 +7,7 @@
 
 html
 {
-    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
 }
 
@@ -160,8 +160,7 @@ body
     left: 0;
     width: 100%;
     height: 100%;
-    /* backdrop-filter: blur(2.5px); */
-    /* background-color: rgba(0, 0, 0, 0.2); */
+    backdrop-filter: blur(1.5px);
     background-color: rgb(255 255 255 / 46%);
     z-index: 1;
 }
@@ -181,6 +180,16 @@ body
     position: relative;
 }
 
+.fl-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+
 #principal
 {
     /* background-color: rgb(255 175 5 / 32%); */
@@ -188,7 +197,7 @@ body
 
 #projets
 {
-    background-color: rgb(143, 110, 110);
+    background-color: rgb(255 255 255 / 46%);
 }
 
 .btn-contact
@@ -199,4 +208,114 @@ body
     bottom: 85px;
     width: 190px;
     font-size: 1.4rem;
+}
+
+.all-projets
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 15px;
+    padding: 12px;
+    /* width: 80%; */
+    height: 70%;
+    width: clamp(340px, 75%, 1050px);
+    z-index: 3;
+    background-color: white;
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px; */
+}
+
+.projet
+{
+    min-width: 300px;
+    width: 22%;
+    height: 400px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 8px;
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.global
+{
+    width: 90%;
+    min-height: 110px;
+    background-color: #272f63;
+    color: rgb(255, 255, 255);
+    border-radius: 8px;
+    z-index: 2;
+    position: absolute;
+    padding: 03px 12px;
+    bottom: 12%;
+    display: flex;
+    flex-direction: column;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.image-bg-projets
+{
+    width: clamp(360px, 80%, 650px);
+    min-height: 750px;
+    /* border: 3px solid #00000057; */
+    opacity: 0.7;
+    background-image: url("../img/fond_er.png");
+    border-radius: 8px;
+    position: absolute;
+    left: 07%;
+    z-index: 1;
+    transform: rotate(180deg);
+}
+
+.projet-1
+{
+    background-image: url("../img/projet-1.png");
+}
+
+.projet-1::before,
+.projet-2::before,
+.projet-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(3px);
+    border-radius: 8px;
+    /* border: 4px solid black; */
+    /* background-color: rgb(255 255 255 / 46%); */
+    background-color: rgb(182 218 231 / 40%);
+    z-index: 1;
+}
+
+.container-projet-1,
+.container-projet-2,
+.container-projet-3
+{
+    flex-grow: 1;
+    /* background-color: red; */
+    padding: 05px;
+}
+
+.title-projet
+{
+    padding: 05px;
+    border-bottom: 2px solid rgb(200, 189, 189);
+}
+
+
+.projet-2
+{
+    background-image: url("../img/projet-2.png");
+}
+
+.projet-3
+{
+    background-image: url("../img/projet-3.png");
 }
