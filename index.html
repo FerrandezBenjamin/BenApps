@@ -5,12 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenApps</title>
   <link rel="stylesheet" href="style/style.css">
+  <link rel="preload" as="image" href="img/bio-1.jpg">
+  <link rel="preload" as="image" href="img/ben.png">
   <script src="script.js"></script>
 </head>
 <body class="">
 
   <!-- Hero Section -->
-  <section id="principal" class="section-general">
+  <section id="principal" class="section-general fade-in">
 
     <div class="fond_1 max-w max-h fl-col gap-12">
       <div class="blog f-center gap-me z-index-2">
@@ -25,7 +27,7 @@
                 <span>Developpeur Web | Beer-pong expert | Notions en réseau | Good English u Know</span>
             </div>
             <div class="img-container">
-                <img src="img/ben.png" alt="" class="img-b">
+                <img src="img/ben.png" alt="" loading="lazy" class="img-b">
             </div>
             <a href="#" class="btn-a btn-contact">Contact</a>
         </div>
@@ -34,7 +36,7 @@
   </section>
 
   <!-- Services Section -->
-  <section id="about" class="section-general fl-row">
+  <section id="about" class="section-general fl-row fade-in">
     <div class="image-bg-about"></div>
 
     <div class="all-about">
@@ -111,17 +113,17 @@
         </div>
 
         <div class="about-2" id="two">
-            <img src="img/bio-1.jpg" alt="" class="image-one-carroussel" id="one-image">
-            <img src="img/bio-2.jpg" alt="" class="image-two-carroussel" id="two-image" style="display: none;">
-            <img src="img/bio-3.jpg" alt="" class="image-three-carroussel" id="three-image" style="display: none;">
-            <img src="img/bio-4.jpg" alt="" class="image-four-carroussel" id="four-image" style="display: none;">
+            <img src="img/bio-1.jpg" alt="" loading="lazy" class="image-one-carroussel" id="one-image">
+            <img src="img/bio-2.jpg" alt="" loading="lazy" class="image-two-carroussel" id="two-image" style="display: none;">
+            <img src="img/bio-3.jpg" alt="" loading="lazy" class="image-three-carroussel" id="three-image" style="display: none;">
+            <img src="img/bio-4.jpg" alt="" loading="lazy" class="image-four-carroussel" id="four-image" style="display: none;">
         </div>
     </div>
 
   </section>
 
     <!-- About Section -->
-  <section id="projets" class="section-general fl-row">
+  <section id="projets" class="section-general fl-row fade-in">
     <div class="image-bg-projets">
 
     </div>
@@ -163,7 +165,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="blog" class="section-general">
+  <section id="blog" class="section-general fade-in">
     ici contact
   </section>
 
