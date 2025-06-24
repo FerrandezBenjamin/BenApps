@@ -161,7 +161,7 @@ body
     width: 100%;
     height: 100%;
     backdrop-filter: blur(1.5px);
-    background-color: rgb(255 255 255 / 46%);
+    background-color: rgb(255 255 255 / 71%);
     z-index: 1;
 }
 
@@ -247,19 +247,27 @@ body
 .about-1
 {
     flex: 4;
-    display: flex;
+    /* display: flex; */
     flex-direction: column;
     justify-content: center;
     padding: 12px;
     align-items: flex-start;
     font-size: 0.9rem;
     gap: 25px;
+    min-height: 80%;
+    position: relative;
 }
 
-.about-2
+
+.image-one-carroussel,
+.image-two-carroussel,
+.image-three-carroussel,
+.image-four-carroussel
 {
     object-fit: cover;
-    background : no-repeat center url("../img/yo.jpg");
+    position: relative;
+    width: 100%;
+    height: 100%;
     background-size: cover;
     background-position: center;
 }
@@ -410,5 +418,22 @@ body
     text-align: center;
     margin:  0 auto;
     cursor: pointer;
-    /* z-index: 55; */
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+}
+
+.jesuis,
+.ecole,
+.jeuxvideo,
+.fetardunpeu
+{
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+}
+
+.ul-me
+{
+    list-style: none;
 }
