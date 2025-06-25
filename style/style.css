@@ -157,6 +157,14 @@ body::-webkit-scrollbar {
     border-radius: 8px;
     min-width: 94px;
     text-align: center;
+    /* transition: background-color 0.2s ease, transform 0.2s ease; */
+}
+
+.btn-a:hover
+{
+    transform: scale(0.98);
+    /* background-color: #f7f7f9; */
+    /* color: white; */
 }
 
 .max-w {
