@@ -507,3 +507,15 @@ body::-webkit-scrollbar {
   pointer-events: auto;
   cursor: pointer;
 }
+
+hr 
+{
+    border: 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+/*  Faire quelque chose avec ca : */
+
+/* transition: transform .7s ease-in-out, opacity .8s ease-in-out; */
