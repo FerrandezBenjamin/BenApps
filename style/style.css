@@ -81,6 +81,7 @@ section
 
 #titre
 {
+    text-align: center;
     font-size: 4rem;
     margin-top: 15px;
     margin-bottom: 15px;
@@ -102,7 +103,7 @@ section
     position: relative;
     /* border-bottom: 1px solid rgb(255, 255, 255); */
     box-sizing: border-box;
-     /* box-shadow: rgb(255 255 255 / 42%) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */ */
+     /* box-shadow: rgb(255 255 255 / 42%) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px; */
 }
 
 /* .accueil::before
@@ -261,13 +262,22 @@ body::-webkit-scrollbar {
 .container
 {
     width: 75%;
-    height: 60%;
+    /* height: 60%; */
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #ffffff;
+    /* border: 2px solid #ffffff; */
     padding: 10px;
     gap: 25px;
+    position: relative;
+}
+
+#border-me
+{
+    width: 80%;
+    height: 60%;
+    position: absolute;
+    border: 2px solid white;
 }
 
 .hs
@@ -390,7 +400,7 @@ body::-webkit-scrollbar {
 {
     position: absolute;
     background-color: white;
-    left: 190px;
+    left: 10px;
     bottom: 85px;
     width: 190px;
     font-size: 1.4rem;
@@ -415,8 +425,8 @@ body::-webkit-scrollbar {
 {
     display: flex;
     gap: 15px;
-    height: 70%;
-    width: clamp(340px, 75%, 1050px);
+    height: 50%;
+    width: clamp(340px, 75%, 900px);
     z-index: 3;
     background-color: white;
 }
