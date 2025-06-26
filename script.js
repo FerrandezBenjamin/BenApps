@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
     const sections = ['principal', 'about', 'projets', 'blog'];
     const scrollButtonA = document.getElementById('scroll-button');
-    const scrollButtonT = document.getElementById('scroll-button-top');
+    // const scrollButtonT = document.getElementById('scroll-button-top');
 
 
     const observer = new IntersectionObserver((entries) => {
@@ -136,28 +136,28 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    scrollButtonT.addEventListener('click', () => {
-        const scrollPosition = window.scrollY + window.innerHeight / 2;
+    // scrollButtonT.addEventListener('click', () => {
+    //     const scrollPosition = window.scrollY + window.innerHeight / 2;
 
-        let previousSection = null;
+    //     let previousSection = null;
 
-        for (let i = sections.length - 1; i >= 0; i--) {
-            const elem = document.getElementById(sections[i]);
-            const elemBottom = elem.getBoundingClientRect().bottom + window.scrollY;
+    //     for (let i = sections.length - 1; i >= 0; i--) {
+    //         const elem = document.getElementById(sections[i]);
+    //         const elemBottom = elem.getBoundingClientRect().bottom + window.scrollY;
 
-            if (elemBottom < scrollPosition) {
-                previousSection = elem;
-                break;
-            }
-        }
+    //         if (elemBottom < scrollPosition) {
+    //             previousSection = elem;
+    //             break;
+    //         }
+    //     }
 
-        if (previousSection) {
-            previousSection.scrollIntoView({ behavior: 'smooth' });
-        } else {
-            // Si aucune section trouvée au-dessus, on reste en haut
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-    });
+    //     if (previousSection) {
+    //         previousSection.scrollIntoView({ behavior: 'smooth' });
+    //     } else {
+    //         // Si aucune section trouvée au-dessus, on reste en haut
+    //         window.scrollTo({ top: 0, behavior: 'smooth' });
+    //     }
+    // });
 
 
 });

@@ -15,9 +15,67 @@ html {
 body
 {
     width: 100%;
+    /* min-height: 100vh; */
+}
+
+.wrapper
+{
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    gap: 35px;
+}
+
+section
+{
+    width: 100%;
     height: 100vh;
-    overflow: auto; /* permet le scroll */
-    scrollbar-width: none;
+}
+
+.section-one
+{
+    position: sticky;
+    top: 0;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+
+.div-one
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70%;
+    width: 100%;
+    padding: 12px;
+}
+
+.section-two
+{
+    background: #ffffff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
+}
+
+.section-three
+{
+    background: #ffffff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+ 
 }
 
 
@@ -27,10 +85,11 @@ body::-webkit-scrollbar {
   height: 0px;
   background: transparent;
 } */
+
 .fade-in {
     opacity: 0;
-    transform: translateY(50px);
-    transition: opacity 2s ease, transform 1.4s ease;
+    /* transform: translateY(30px); */
+    transition: opacity 1s ease, transform 2s ease-in-out;
 }
 
 .fade-in.visible {
@@ -48,6 +107,17 @@ body::-webkit-scrollbar {
 .fade-in-base.visible {
     opacity: 1;
     /* transform: translateY(0); */
+}
+
+.stick-me0
+{
+    position: sticky!important;
+    top: 0;
+    min-height: 100vh;
+}
+
+.height-100vh{
+    min-height: 100vh;
 }
 
 .flex
@@ -129,7 +199,6 @@ body::-webkit-scrollbar {
     align-items: center;
     width: clamp(460px, 80%, 1100px);
     position: relative;
-    z-index: 2;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
@@ -163,8 +232,6 @@ body::-webkit-scrollbar {
 .btn-a:hover
 {
     transform: scale(0.98);
-    /* background-color: #f7f7f9; */
-    /* color: white; */
 }
 
 .max-w {
@@ -203,13 +270,13 @@ body::-webkit-scrollbar {
     background-color: rgb(255 255 255 / 71%);
     z-index: 1;
 } */
-
+/* 
 .section-general
 {
     width: 100%;
     height: 100%;
     position: relative;
-}
+} */
 
 .fl-col
 {
@@ -217,7 +284,6 @@ body::-webkit-scrollbar {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 .fl-row
@@ -226,7 +292,6 @@ body::-webkit-scrollbar {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    position: relative;
 }
 
 
@@ -237,7 +302,7 @@ body::-webkit-scrollbar {
 
 #projets
 {
-    background-color: rgb(255 255 255 / 46%);
+    background-color: rgb(255 255 255);
 }
 
 .btn-contact
@@ -258,7 +323,6 @@ body::-webkit-scrollbar {
     align-items: center;
     gap: 15px;
     padding: 12px;
-    /* width: 80%; */
     height: 70%;
     width: clamp(340px, 75%, 1050px);
     z-index: 3;
@@ -508,14 +572,6 @@ body::-webkit-scrollbar {
     display: block!important;
 }
 
-.can-scroll-up {
-  position: fixed;
-  top: 25px; 
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 9999;
-  cursor: pointer;
-}
 
 .arrow-up {
   width: 32px;

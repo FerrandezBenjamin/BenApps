@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+}
+
+.section-1 {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    background: #3498db;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    width: 100%;
+}
+
+.section-2 {
+    height: 100vh;
+    background: #2ecc71;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    width: 100%;
+
+}
