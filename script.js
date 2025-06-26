@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const options = {
         threshold: 0.1
     };
-    const sections = ['principal', 'about', 'projets', 'blog'];
+    const sections = ['principal', 'about','projets', 'contact'];
     const scrollButtonA = document.getElementById('scroll-button');
     // const scrollButtonT = document.getElementById('scroll-button-top');
 
@@ -158,6 +158,6 @@ document.addEventListener("DOMContentLoaded", function () {
     //         window.scrollTo({ top: 0, behavior: 'smooth' });
     //     }
     // });
-
+    
 
 });
