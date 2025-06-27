@@ -2,16 +2,6 @@
     /* Styles pour les très petits écrans */
 
 
-    .all-about {
-        width: 100%;
-    }
-
-
-    #two
-    {
-        display: none;
-    }
-
     .arrow
     {
         text-align: center;
@@ -29,5 +19,31 @@
         justify-content: flex-end;
     }
 
+}
+
+
+
+
+
+@media (max-width: 660px) {
+    /* Styles pour les tablettes */
+
+    .about-2
+    {
+        display: none!important;
+    }
+
+
+}
+
+
+
+@media (max-width: 900px) {
+    /* Styles pour les tablettes */
+
+
+    .all-about {
+        width: 100%;
+    }
 
 }

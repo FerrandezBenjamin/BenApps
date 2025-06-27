@@ -597,7 +597,7 @@ body::-webkit-scrollbar {
     display: flex;
     gap: 15px;
     height: 50%;
-    width: clamp(340px, 75%, 900px);
+    width: clamp(340px, 85%, 900px);
     z-index: 3;
     background-color: white;
 }
