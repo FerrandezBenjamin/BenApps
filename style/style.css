@@ -534,8 +534,10 @@ body::-webkit-scrollbar {
 }
 
 
-.li-projet span {
-    display: block;
+.global-pres {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
     padding: 12px 0 0 0;
     text-align: justify;
     font-size: 0.9rem;
@@ -543,17 +545,41 @@ body::-webkit-scrollbar {
     letter-spacing: 0.3px;
     color: #2b2b2b;
     hyphens: auto;
+    height: 90%;
 }
 
 
 .space-projet
 {
+    height: 100%;
+}
+
+.details
+{
+    height: 100%;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    align-content: center;
-    /* height: 100%; */
+}
+
+.btn-details
+{
+    padding: 12px;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 50px;
+    min-width: 150px;
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+}
+
+.stack
+{
+    width: 100%;
+    text-align: center;
 }
 
 #projet-1
