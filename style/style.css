@@ -604,15 +604,17 @@ body::-webkit-scrollbar {
 
 .about-1
 {
+    display: flex;
     flex: 4;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     padding: 12px;
-    align-items: flex-start;
+    /* align-items: flex-start; */
     font-size: 0.9rem;
     gap: 25px;
-    min-height: 80%;
+    /* min-height: 80%; */
     position: relative;
+    height: 580px;
 }
 
 
@@ -767,15 +769,28 @@ body::-webkit-scrollbar {
     width: 100%;
 }
 
+.arrow-container
+{
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    align-items: flex-end;
+    flex-grow: 1;
+}
+
 .arrow
 {
-    width: 40px; 
     text-align: center;
-    margin:  0 auto;
+    position: relative;
     cursor: pointer;
-    position: absolute;
-    bottom: 5px;
-    left: 5px;
+    bottom: unset;
+    left: unset;
+    margin: 10px 0px 10px 0px;
+}
+
+.arrow-container img
+{
+    width: 40px;
 }
 
 .jesuis,

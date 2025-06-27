@@ -1,0 +1,33 @@
+@media (max-width: 576px) {
+    /* Styles pour les très petits écrans */
+
+
+    .all-about {
+        width: 100%;
+    }
+
+
+    #two
+    {
+        display: none;
+    }
+
+    .arrow
+    {
+        text-align: center;
+        position: relative;
+        cursor: pointer;
+        bottom: unset;
+        left: unset;
+        margin: 10px 0px 10px 0px;
+    
+    }
+
+    .arrow-container
+    {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+
+}
