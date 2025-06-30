@@ -72,11 +72,21 @@ section
 .section-three-spc
 {
     background: #ffffff;
-    color: white;
-    display: flex;
-    /* align-items: center; */
-    justify-content: center;
+    color: rgb(0, 0, 0);
     z-index: 2;
+    gap: 15px;
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.explication
+{
+    width: clamp(340px, 85%, 1050px);
+    border: 1px solid rgb(202 190 190 / 28%);
+    padding: 12px;
+    margin: 5% auto;
 }
 
 .section-two
@@ -399,15 +409,7 @@ body::-webkit-scrollbar {
 #principal
 {
     background-color: rgb(0 0 0 / 77%);
-    /* radial-gradient(circle at center, rgba(0,153,255,0.15), transparent 80%); */
-
-    /* TOP : */
     background-image: linear-gradient(to bottom, rgb(47 9 255 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
-
-
-    
-
-
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -543,7 +545,7 @@ body::-webkit-scrollbar {
 
 .marge-projet
 {
-    margin-top: 10%;
+    margin: 10% auto;
 }
 
 .li-projet strong {
