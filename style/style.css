@@ -398,6 +398,23 @@ body::-webkit-scrollbar {
 #principal
 {
     background-color: rgb(0 0 0 / 77%);
+    /* radial-gradient(circle at center, rgba(0,153,255,0.15), transparent 80%); */
+
+    /* TOP : */
+    background-image: linear-gradient(to bottom, rgb(47 9 255 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+
+
+    
+
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
 }
 
 #projets
@@ -499,6 +516,7 @@ body::-webkit-scrollbar {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 20px;
     overflow: hidden;
+    font-size: 0.9rem;
     border-bottom: 1px solid rgba(128, 128, 128, 0.622);
     position: relative;
     height: 70px;
@@ -540,7 +558,7 @@ body::-webkit-scrollbar {
     gap: 15px;
     padding: 12px 0 0 0;
     text-align: justify;
-    font-size: 0.9rem;
+    /* font-size: 0.9rem; */
     line-height: 1.8;
     letter-spacing: 0.3px;
     color: #2b2b2b;

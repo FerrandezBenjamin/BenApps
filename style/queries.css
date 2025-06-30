@@ -19,6 +19,11 @@
         justify-content: flex-end;
     }
 
+    .all-projets
+    {
+        width: 100%;
+    }
+
 }
 
 
@@ -33,6 +38,16 @@
         display: none!important;
     }
 
+    .li-projet
+    {
+        font-size: 0.85rem;
+    }
+
+    .li-projet:hover {
+        /* height: 450px; */
+        /* transform: scaleY(1); */
+    }
+
 
 }
 
@@ -42,8 +57,15 @@
     /* Styles pour les tablettes */
 
 
-    .all-about {
+    .li-projet
+    {
+        font-size: 0.75rem;
+    }
+
+    .all-about
+    {
         width: 100%;
     }
+
 
 }
