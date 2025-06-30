@@ -5,6 +5,37 @@
     scroll-behavior: smooth;
 }
 
+:root {
+  --bg-mode-base: linear-gradient(to bottom, rgb(36 29 75 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+  --bg-mode-white:#ffffff;
+  --bg-mode-base-c:rgb(0 0 0 / 77%);
+  --text-white : white;
+  --text-black : black;
+}
+
+.mode-base
+{
+    background-color: var(--bg-mode-base-c);
+    background-image :var(--bg-mode-base);
+    color: var(--text-white);
+}
+
+.btn-c-base a
+{
+    color: var(--text-white);
+}
+
+.btn-c-white a
+{
+    color: var(--text-black);
+}
+
+.mode-white
+{
+    background: var(--bg-mode-white);
+    color: var(--text-black);
+}
+
 html {
     font-family: 'Quicksand', sans-serif;
     font-size: 15px;
@@ -38,7 +69,7 @@ section
 {
     position: sticky;
     top: 0;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,7 +91,6 @@ section
 .section-two,
 .section-four
 {
-    background: #ffffff;
     color: white;
     display: flex;
     align-items: center;
@@ -69,9 +99,13 @@ section
 
 }
 
-.section-three-spc
+.bg-white
 {
     background: #ffffff;
+}
+
+.section-three-spc
+{
     color: rgb(0, 0, 0);
     z-index: 2;
     gap: 15px;
@@ -104,7 +138,7 @@ section
     font-size: 4rem;
     margin-top: 15px;
     margin-bottom: 15px;
-    color: white;
+    /* color: white; */
 }
 
 .accueil
@@ -265,7 +299,7 @@ body::-webkit-scrollbar {
 }
 .blog a 
 {
-    color: white;
+    /* color: white; */
 }
 
 .gap-12
@@ -329,7 +363,7 @@ body::-webkit-scrollbar {
 .btn-a
 {
     text-decoration: none;
-    color: black;
+    /* color: black; */
     padding: 7px 12px;
     /* border: 1px solid black; */
     /* border-bottom:2px solid black; */
@@ -408,8 +442,7 @@ body::-webkit-scrollbar {
 
 #principal
 {
-    background-color: rgb(0 0 0 / 77%);
-    background-image: linear-gradient(to bottom, rgb(47 9 255 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    /* background-color: rgb(0 0 0 / 90%); */
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
@@ -417,7 +450,7 @@ body::-webkit-scrollbar {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: white;
+    /* color: white; */
 }
 
 #projets
@@ -611,16 +644,71 @@ body::-webkit-scrollbar {
     position: relative; */
 }
 
+.b-radius
+{
+    border-radius: 8px;
+}
+
+.b-radius-top-r, .b-radius-top-r img
+{
+    border-top-right-radius: 8px;
+}
+
+.b-radius-bot-r, .b-radius-bot-r img
+{
+    border-bottom-right-radius: 8px;
+}
+
+.switch {
+    position:absolute;
+    top: 2%;
+    right: 2%;
+    display:inline-block;
+    width: 60px;
+    height: 30px;
+    z-index: 9999;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 25px;
+    width: 25px;
+    left: 4px;
+    bottom: 3px;
+    background-color: rgb(30 48 87);
+    transition: 0.4s;
+    border-radius: 50px;
+    transform: translateX(0);
+}
+
+.slider.active:before {
+    transform: translateX(27px);
+}
+
+.slider {
+    position: relative; 
+    display: inline-block;
+    width: 60px;
+    height: 32px;
+    background-color: #f0eeee;
+    border-radius: 50px;
+    cursor: pointer;
+}
+
+
+
 
 
 .all-about 
 {
     display: flex;
     gap: 15px;
-    height: 50%;
-    width: clamp(340px, 85%, 900px);
+    min-height: 50%;
+    width: clamp(340px, 85%, 1050px);
     z-index: 3;
     background-color: white;
+    border-radius: 8px;
 }
 
 .about-1

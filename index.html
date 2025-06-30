@@ -14,6 +14,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
 
     <script src="js/script.js"></script>
+    <script src="js/switch-mode.js"></script>
     <!-- <script src="js/slide.js"></script> -->
 </head>
 <body class="">
@@ -21,16 +22,22 @@
     <div class="can-scroll-down">
         <img src="/img/arrow-down-white.png" class="arrow-down" alt="flechebas" id="scroll-button">
     </div>
+
+    <div class="switch">
+        <span class="slider" id="the-slider"></span>
+    </div>
+
+
 <div class="wrapper">
     <!-- Hero Section -->
-    <section id="principal" class="section-one">
+    <section id="principal" class="section-one mode-base">
 
         <div class="accueil fade-in-base" id="accueil">
             <!--<div id="liseret"></div>-->
 
             <h1 id="titre">Benjamin FERRANDEZ</h1>
             
-            <div class="blog f-center gap-me z-index-2">
+            <div class="f-center gap-me z-index-2 btn-c-base" id="contain_btn">
                 <a href="#about" class="btn-a">A propos</a>
                 <a href="#projets" class="btn-a">Mes projets</a>
                 <a href="#contact" class="btn-a">Contact</a>
@@ -113,12 +120,12 @@
 
                 <!-- Première photo -->
                     <div class="arrow-container">
-                        <img src="/img/arrow-right.png" class="arrow" alt="fleche"  id="carrousel">
+                        <img src="/img/arrow-right.png" class="arrow b-radius-top-r b-radius-bot-r" alt="fleche"  id="carrousel">
                     </div>
                 <!--//////////////////////////////////-->
             </div>
 
-            <div class="about-2" id="two">
+            <div class="about-2 b-radius-top-r b-radius-bot-r" id="two">
                 <img src="img/bio-1.jpg" alt="" loading="lazy" class="image-one-carroussel" id="one-image">
                 <img src="img/bio-2.jpg" alt="" loading="lazy" class="image-two-carroussel" id="two-image" style="display: none;">
                 <img src="img/bio-3.jpg" alt="" loading="lazy" class="image-three-carroussel" id="three-image" style="display: none;">
