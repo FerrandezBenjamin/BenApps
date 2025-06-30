@@ -30,6 +30,7 @@
     }
 
     .hs {
+        width: auto;
         height: 100%;
     }
 /* 
@@ -54,6 +55,11 @@
         width: 100%;
         justify-content: center;
         align-items: center;
+    }
+
+    .explain h2
+    {
+        font-size: 1.7rem;
     }
 
     .img-b
