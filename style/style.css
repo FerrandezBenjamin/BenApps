@@ -355,7 +355,7 @@ body::-webkit-scrollbar {
     gap: 5px;
 }
 
-.explain h2, .nav-me h2
+.explain h2
 {
     font-size: 2.5rem;
 }
@@ -363,11 +363,7 @@ body::-webkit-scrollbar {
 .btn-a
 {
     text-decoration: none;
-    /* color: black; */
     padding: 7px 12px;
-    /* border: 1px solid black; */
-    /* border-bottom:2px solid black; */
-    /* border-radius: 8px; */
     min-width: 94px;
     text-align: center;
     /* transition: transform 2s ease; */
@@ -860,16 +856,10 @@ body::-webkit-scrollbar {
 .explain-me
 {
     text-align: justify;
-    /* font-family: 'Georgia', serif; */
-    font-size: 0.9rem;
     line-height: 1.8;
     letter-spacing: 0.3px;
     color: #2b2b2b;
     hyphens: auto;
-    /* margin-bottom: 1.5rem; */
-    /* display: flex;
-    flex-direction: column;
-    gap: 10px; */
 }
 
 .next 

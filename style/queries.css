@@ -42,10 +42,6 @@
     {
         font-size: 0.8rem;
     }
-/* 
-    .hs img {
-        display: none;
-    } */
 
     #border-me
     {
@@ -106,6 +102,20 @@
         font-size: 0.8rem;
     }
 
+    .about-1
+    {
+        font-size: 0.8rem;
+    }
+
+    .section-two
+    {
+        padding: unset;
+    }
+
+    .all-about
+    {
+        border-radius: unset;
+    }
 }
 
 
