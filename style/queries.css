@@ -2,6 +2,10 @@
     /* Styles pour les très petits écrans */
 
 
+    .wrapper{
+        gap: 200px;
+    }
+
     .arrow
     {
         text-align: center;
