@@ -24,6 +24,73 @@
         width: 100%;
     }
 
+    .ul-projet
+    {
+        padding: 15px;
+    }
+
+    .hs {
+        height: 100%;
+    }
+/* 
+    .hs img {
+        display: none;
+    } */
+
+    #border-me
+    {
+         display: none;
+    }
+
+    .container
+    {
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+    }
+
+    .explain
+    {
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-b
+    {
+        width: 60%;
+    }
+
+    .img-container
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-contact
+    {
+        position: relative;
+        left: unset;
+        bottom: unset;
+        font-size: 0.9rem;
+    }
+
+    .div-one
+    {
+        height: 650px;
+    }
+
+    #titre
+    {
+        font-size: 3rem;
+    }
+
+    .blog
+    {
+        font-size: 0.8rem;
+    }
+
 }
 
 
