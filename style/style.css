@@ -109,7 +109,7 @@ section
     color: rgb(0, 0, 0);
     z-index: 2;
     gap: 15px;
-    /* display: flex; */
+    display: flex;
     /* flex-direction: column; */
     /* align-items: center; */
     /* justify-content: center; */
@@ -518,50 +518,147 @@ body::-webkit-scrollbar {
     background-color: #2b2b2b21;
 } */
 
+/************ AVANT *********/
 /* CONTAINER DES PROJETS */
-.all-projets {
+/* .all-projets {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    align-items: stretch;
     height: 100%;
-    width: clamp(340px, 75%, 1050px);
-    /* background-color: rgb(201, 166, 166); */
-    padding: 12px;
+    width: 100%;
     z-index: 3;
+    overflow: hidden;
 
 }
 
-/* LISTE */
+.projets-title
+{
+    font-size: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 3;
+    padding: 35px;
+}
+
 .ul-projet {
     display: flex;
-    flex-direction: column;
     gap: 35px;
     height: 100%;
     list-style: none;
-    padding: 0;
-    margin: 0;
+    padding: 12px;
+    align-items: stretch;
     color: black;
+    align-items: center;
+    width: 3000px;
 }
 
-/* CHAQUE ITEM */
 .li-projet {
     background-color: rgba(255, 255, 255, 0.15);
     padding: 20px;
     overflow: hidden;
     font-size: 0.9rem;
-    border-bottom: 1px solid rgba(128, 128, 128, 0.622);
+    flex: 1;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     position: relative;
-    height: 70px;
-    transition: height 1s ease;
     transform-origin: top;
+    width: 500px;
+} */
+
+/* APRES */
+/* SECTION = hauteur écran */
+section#projets {
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden; /* cache le scroll horizontal */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.li-projet:hover
+.projets-title
 {
-    height: 400px;
-    /* transform: scaleY(1); */
+    margin-bottom: 25px;
 }
+
+/* WRAPPER global si besoin de centrer */
+.all-projets {
+  width: 100%;
+  overflow: hidden; /* important pour slider */
+}
+
+/* UL = rail horizontal */
+.ul-projet {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  padding: 12px;
+  margin: 0;
+  list-style: none;
+  height: 100%; /* prend toute la hauteur de la section */
+  transition: transform 0.4s ease-in-out;
+}
+
+/* LI = chaque carte projet */
+.li-projet {
+  flex-shrink: 0;
+  width: 35vw;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+/* ESPACEMENT INTERNE */
+.space-projet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* CONTENU GLOBAL */
+.global-pres {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* PRÉSENTATION (texte) */
+.presentation {
+  flex: 1;
+  margin-bottom: 1rem;
+}
+
+/* STACK (techno) */
+.stack {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+/* BOUTON */
+.details {
+  margin-top: auto;
+}
+.btn-details {
+  display: inline-block;
+  background: #3b4d63;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.btn-details:hover {
+  background: #2c3a4b;
+}
+
 
 /* #projet-1::before
 {
