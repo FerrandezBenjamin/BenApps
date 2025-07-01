@@ -342,6 +342,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     width: clamp(460px, 80%, 1100px);
+    min-height: 460px;
     position: relative;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
@@ -460,7 +461,7 @@ body::-webkit-scrollbar {
 
 .btn-contact
 {
-    position: absolute;
+    /* position: absolute; */
     background-color: white;
     left: 10px;
     bottom: 85px;
