@@ -335,8 +335,8 @@ body::-webkit-scrollbar {
 
 .hs
 {
-    background-color: rgb(77 76 99 / 77%);
-    background-image: linear-gradient(to bottom, rgb(127 108 229 / 80%), rgb(17 33 79 / 95%)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    background-color: rgb(5 6 20);
+    /* background-image: linear-gradient(to bottom, rgb(127 108 229 / 80%), rgb(17 33 79 / 95%)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%); */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -344,7 +344,7 @@ body::-webkit-scrollbar {
     width: clamp(460px, 80%, 1100px);
     min-height: 460px;
     position: relative;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 
 .explain
