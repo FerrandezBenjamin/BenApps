@@ -10,13 +10,12 @@
     <link rel="preload" as="image" href="img/bio-2.jpg">
     <link rel="preload" as="image" href="img/bio-3.jpg">
     <link rel="preload" as="image" href="img/bio-4.jpg">
-    <link rel="preload" as="image" href="img/ben.png">
     <link rel="icon" type="image/vnd.icon" href="img/benicone.ico">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/swiper-bundle.min.css"/>
     
     <script src="js/script.js"></script>
     <script src="js/switch-mode.js"></script>
+    <script src="js/slider-infinite.js"></script>
     <!-- <script src="js/slide.js"></script> -->
 </head>
 <body class="">
@@ -138,96 +137,65 @@
     </section>
 
         <!-- About Section -->
-<section id="projets" class="fade-in section-three-spc">
+    <section id="projets" class="fade-in section-three-spc">
 
-    <div class="projets-title">
-      Mes projets développé par moi
-    </div>
-
-  <div class="all-projets">
-    <!-- Swiper wrapper -->
-    <div class="swiper">
-      <div class="swiper-wrapper">
-
-        <!-- Slide 1 -->
-        <div class="swiper-slide" id="projet-1">
-          <div class="space-projet">
-            <strong>Fixly</strong>
-            <div class="global-pres">
-              <div class="presentation">
-              </div>
-              <div class="stack">
-              </div>
-              <div class="details">
-                <a href="https://fixly.benapps.fr/" target="_blank" class="btn-details">Détails</a>
-              </div>
-            </div>
-          </div>
+        <div class="projets-title">
+        Mes projets développé par moi
         </div>
 
-        <!-- Slide 2 -->
-        <div class="swiper-slide" id="projet-2">
-          <div class="space-projet">
-            <strong>IUT-Absence</strong>
-            <div class="global-pres">
-              <div class="presentation">
-                IUT-Absence est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-              </div>
-              <div class="stack">
-                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-              </div>
-              <div class="details">
-                <a href="#" class="btn-details">Détails</a>
-              </div>
+        <div class="all-projets">
+            <!-- Swiper wrapper -->
+            <div class="carroussel">
+                <div class="carroussel-slider">
+
+                    <div class="card-projet projet-1">
+                        <div class="card-title">
+                            Fixly
+                        </div>
+                        <div class="card-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at iste maiores optio rerum. Asperiores molestias nam non consequatur! Quas nam minima eos nemo, quisquam beatae nisi quasi laudantium deserunt!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-projet projet-2">
+                        <div class="card-title">
+                            IUT-Absence
+                        </div>
+                        <div class="card-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at iste maiores optio rerum. Asperiores molestias nam non consequatur! Quas nam minima eos nemo, quisquam beatae nisi quasi laudantium deserunt!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-projet projet-3">
+                        <div class="card-title">
+                            IUT-Carton
+                        </div>
+                        <div class="card-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at iste maiores optio rerum. Asperiores molestias nam non consequatur! Quas nam minima eos nemo, quisquam beatae nisi quasi laudantium deserunt!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-projet projet-4">
+                        <div class="card-title">
+                            IUT-EDT
+                        </div>
+                        <div class="card-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at iste maiores optio rerum. Asperiores molestias nam non consequatur! Quas nam minima eos nemo, quisquam beatae nisi quasi laudantium deserunt!</p>
+                        </div>
+                    </div>
+
+                    <div class="card-projet projet-5">
+                        <div class="card-title">
+                            PourFaireGenre
+                        </div>
+                        <div class="card-container">
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at iste maiores optio rerum. Asperiores molestias nam non consequatur! Quas nam minima eos nemo, quisquam beatae nisi quasi laudantium deserunt!</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-
-        <!-- Slide 3 -->
-        <div class="swiper-slide" id="projet-3">
-          <div class="space-projet">
-            <strong>IUT-EDT</strong>
-            <div class="global-pres">
-              <div class="presentation">
-                IUT-EDT est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-              </div>
-              <div class="stack">
-                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-              </div>
-              <div class="details">
-                <a href="#" class="btn-details">Détails</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Slide 4 -->
-        <div class="swiper-slide" id="projet-4">
-          <div class="space-projet">
-            <strong>IUT-Carton</strong>
-            <div class="global-pres">
-              <div class="presentation">
-                IUT-Carton est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-              </div>
-              <div class="stack">
-                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-              </div>
-              <div class="details">
-                <a href="#" class="btn-details">Détails</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <!-- Pagination & navigation -->
-      <div class="swiper-pagination"></div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-    </div>
-  </div>
-</section>
+    </section>
     <!-- Contact Section -->
     <section id="contact" class="fade-in section-four">
           <div class="fond_1 gap-12 div-one">

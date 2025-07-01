@@ -570,7 +570,7 @@ body::-webkit-scrollbar {
 .carousel-container {
   position: relative;
   width: 100%;
-  padding: 0 5vw; /* Pour voir les cartes latérales */
+  padding: 0 5vw;
   box-sizing: border-box;
 }
 
@@ -597,11 +597,10 @@ body::-webkit-scrollbar {
   gap: 25px;
 }
 
-/* SECTION = hauteur écran */
 section#projets {
   width: 100%;
   min-height: 100vh;
-  overflow: hidden; /* cache le scroll horizontal */
+  overflow: hidden; 
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -616,37 +615,116 @@ section#projets {
     margin-bottom: 25px;
 }
 
-/* WRAPPER global si besoin de centrer */
 .all-projets {
   width: 100%;
-  overflow: hidden; /* important pour slider */
+  overflow: hidden; 
 }
 
-/* UL = rail horizontal */
-.ul-projet {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
-  padding: 12px;
-  margin: 0;
-  list-style: none;
-  height: 100%; /* prend toute la hauteur de la section */
-  transition: transform 0.4s ease-in-out;
+.carroussel
+{
+    width: 100%;
+    position: relative;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/* LI = chaque carte projet */
-.li-projet {
-  flex-shrink: 0;
-  width: 35vw;
-  height: 100%;
-  box-sizing: border-box;
-  border-radius: 12px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  padding: 20px;
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+.carroussel-slider
+{
+    /* overflow: hidden; */
+    display: flex;
+    gap: 10px;
+    animation: swipe 10s linear infinite;
 }
+
+.card-projet
+{
+    width: 417px;
+    height: 236px;
+    background-size: 417px 236px;
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-projet::before
+{
+    content: '';
+    position: absolute;
+    background: #0000007e;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.projet-1
+{
+    background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Features112/v4/c5/84/4f/c5844f78-6490-2bcf-7f3b-1188f6a0288a/3a7bc10c-b414-498d-9b78-d21ab4efbe70.png/417x236.jpg);
+}
+
+.projet-2
+{
+    background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Video221/v4/cc/88/58/cc8858ff-e318-d96e-8a1a-a15dad8f5dbf/media-ST_GC_0157-9764864-Artwork-iOS-323746.png/417x236.jpg);
+}
+
+.projet-3
+{
+    background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Features211/v4/03/36/de/0336dec4-8cdd-f206-03ce-4b68bdf29737/e0e01f1e-d50c-4154-835a-f1766ffa89da.png/417x236.jpg);
+}
+
+
+.projet-4
+{
+    background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Features/v4/dc/cf/89/dccf8922-21e7-765c-edea-bca02bbb1300/a4ca9f85-f07a-458e-a753-ae8e1b875466.png/196x196sr.jpg);
+}
+
+.projet-5
+{
+    background-image: url(https://is1-ssl.mzstatic.com/image/thumb/Features221/v4/89/07/9c/89079c5b-29da-cd1f-4ce3-ad68f3d28a68/f0346506-4c9f-4be1-b275-11fa4004b103.png/286x161.jpg);
+}
+
+@keyframes swipe {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100px);
+  }
+}
+
+.card-title
+{
+    position: relative;
+    width: 100%;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+
+}
+
+.card-container
+{
+    color: white;
+    width: 100%;
+    text-align: justify;
+    line-height: 1.8;
+    letter-spacing: 0.3px;
+    color: #ffffff;
+    hyphens: auto;
+    padding: 10px;
+    font-size: 0.9rem;
+    z-index: 1;
+}
+
+
+
+
+
+
 
 /* ESPACEMENT INTERNE */
 .space-projet {
@@ -663,22 +741,11 @@ section#projets {
   justify-content: space-between;
 }
 
-/* PRÉSENTATION (texte) */
-.presentation {
-  flex: 1;
-  margin-bottom: 1rem;
-}
 
-/* STACK (techno) */
-.stack {
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
-}
+
 
 /* BOUTON */
-.details {
-  margin-top: auto;
-}
+
 .btn-details {
   display: inline-block;
   background: #3b4d63;
@@ -936,7 +1003,7 @@ section#projets {
     transform: rotate(180deg); */
 }
 
-.projet-1
+/* .projet-1
 {
     background-image: url("../img/projet-1.png");
 }
@@ -952,11 +1019,9 @@ section#projets {
     height: 100%;
     backdrop-filter: blur(3px);
     border-radius: 8px;
-    /* border: 4px solid black; */
-    /* background-color: rgb(255 255 255 / 46%); */
     background-color: rgb(182 218 231 / 40%);
     z-index: 1;
-}
+} */
 
 .container-projet-1,
 .container-projet-2,
@@ -973,7 +1038,7 @@ section#projets {
     padding: 05px;
     border-bottom: 2px solid rgb(200, 189, 189);
 }
-
+/* 
 .projet-2
 {
     background-image: url("../img/projet-2.png");
@@ -982,7 +1047,7 @@ section#projets {
 .projet-3
 {
     background-image: url("../img/projet-3.png");
-}
+} */
 
 .explain-me
 {
