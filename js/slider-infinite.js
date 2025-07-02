@@ -9,14 +9,14 @@ document.addEventListener("DOMContentLoaded", () => {
     let animationFrameId;
     let currentHoveredCard = null;
 
-    // function animate() {
-    //     position -= speed;
-    //     if (Math.abs(position) >= slider.scrollWidth / 2) {
-    //         position = 0;
-    //     }
-    //     slider.style.transform = `translateX(${position}px)`;
-    //     animationFrameId = requestAnimationFrame(animate);
-    // }
+    function animate() {
+        position -= speed;
+        if (Math.abs(position) >= slider.scrollWidth / 2) {
+            position = 0;
+        }
+        slider.style.transform = `translateX(${position}px)`;
+        animationFrameId = requestAnimationFrame(animate);
+    }
 
     function stopAnimation() {
         cancelAnimationFrame(animationFrameId);
