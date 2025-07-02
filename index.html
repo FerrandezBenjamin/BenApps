@@ -10,26 +10,27 @@
     <link rel="preload" as="image" href="img/bio-2.jpg">
     <link rel="preload" as="image" href="img/bio-3.jpg">
     <link rel="preload" as="image" href="img/bio-4.jpg">
-    <link rel="preload" as="image" href="img/ben.png">
     <link rel="icon" type="image/vnd.icon" href="img/benicone.ico">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
-
+    
     <script src="js/script.js"></script>
     <script src="js/switch-mode.js"></script>
+    <script src="js/slider-infinite.js"></script>
     <!-- <script src="js/slide.js"></script> -->
 </head>
-<body class="">
+<body>
 
     <div class="can-scroll-down">
         <img src="/img/arrow-down-white.png" class="arrow-down" alt="flechebas" id="scroll-button">
     </div>
 
-    <div class="switch">
+    <span class="switch">
         <span class="slider" id="the-slider"></span>
-    </div>
-
+    </span>
 
 <div class="wrapper">
+        
+
     <!-- Hero Section -->
     <section id="principal" class="section-one mode-base">
 
@@ -43,214 +44,29 @@
                 <a href="#projets" class="btn-a">Mes projets</a>
                 <a href="#contact" class="btn-a">Contact</a>
             </div>
+
+            <span id="dev">
+                Le site est actuellement en dev .<br>
+            </span>
         </div>
 
     </section>
 
-    <!-- Services Section -->
-    <section id="about" class="fade-in section-two">
-        <!--<div class="image-bg-about"></div>-->
 
-        <div class="all-about">
-            <div class="about-1">
-
-                <!-- Explication de moi -->
-                    <div class="explain-me">
-                        <div class="jesuis" id="one-text">
-
-                            <h3>Je suis..</h3>
-
-                            <p>
-                                Né en Savoie, en janvier 1995. J'ai grandi ici, entre montagnes et lacs.  
-                                Aujourd'hui, j'habite dans une petite commune proche de Chambéry. 
-                                Le cadre est calme, et reposant. J'apprécie la qualité de vie,  
-                                l'air pur et les paysages, tout en restant connecté.
-                            </p>
-                            
-                            <p>
-                                On dit souvent de moi que je suis méthodique et fiable. J’aime aller au fond des choses, comprendre les mécanismes,
-                                les logiques cachées derrière ce qui nous entoure. Mon esprit curieux me pousse constamment à apprendre et à explorer.
-                                Le sport a occupé une grande place dans ma vie, il m’a transmis des valeurs solides : sens de l’engagement, goût de l’effort, et une persévérance à toute épreuve.
-                            </p>
-                        </div>
-
-                        <div class="ecole" id="two-text" style="display: none">
-                            <h3>Mes études</h3>
-                            <p>
-                                J’ai repris mes études en 2020 avec un DU au Campus Numérique, qui m’a permis d’acquérir des bases solides. J’ai ensuite poursuivi avec une licence en Informatique aux Charmilles, où j’ai approfondi mes connaissances, notamment en réseau et en informatique générale. Toujours animé par l’envie d’apprendre, j’ai intégré un Master en Ingénierie Informatique et Systèmes d’Information à l’EPSI.    
-                            </p>
-                            
-                            <p>
-                                Chaque école m’a apporté une richesse particulière : le Campus Numérique m’a initié au développement, les Charmilles l'informatique au sens large — et le master m’a ouvert aux notions de management et de systèmes d'information.
-                            </p>
-                        </div>
-
-                        <div class="jeuxvideo" id="three-text" style="display: none">
-                            <h3>Les jeux !</h3>
-                            <p>
-                                Entre deux lignes de code, je me détends sur des jeux en ligne, seul ou avec des amis. J’ai aussi monté ma propre config — une expérience que je recommande à tous !
-                            </p>
-                            
-                                <ul class="ul-me"> <strong>Configuration :</strong>
-                                    <li> Carte mère : Asus rog STRIX B650E-F</li>
-                                    <li> Processeur : Ryzen 7800X3D</li>
-                                    <li> Carte graphique : Nvidia RTX 4060Ti (16G)</li>
-                                    <li> RAM : Corsair Vengeance DDR5 (16G x2)</li>
-                                    <li> Alimentation : Corsair RM850x 80 plus gold </li>
-                                    <li> Boitier : Deepcool CH650 Digital </li>
-                                    <li> Ventirad : DeepCool LS720 SE 360mn </li>
-                                    <li> Clavier : Apex Pro steelSeries</li>
-                                    <li> Souris : SteelSeries Rival 5</li>
-                                </ul>
-                            </p>
-                        </div>
-
-                        <div class="fetardunpeu" id="four-text" style="display: none">
-                            <h3>La fête..</h3>
-                            <p>
-                                Il faut bien relâcher la pression entre deux compilations qui plantent. Je profite de ces moments pour changer de cadre, passer du mode “débogage” au mode “déconnexion totale”, et souvent rigoler jusqu’à ne plus sentir mes joues. 
-                            </p>
-                            
-                            <p>
-                                Certains sortent leur meilleure tenue, moi je mise tout sur mon stock de playlists douteuses et mon expertise en Beer-pong (franchement je suis pas mauvais quoi)
-                                Ce n’est pas qu’une simple pause : c’est un bon rappel que l’équilibre, ça passe aussi par ces instants spontanés, imparfaits, mais sincères.
-                            </p>
-                        </div>
-                    </div>
-                <!--//////////////////////////////////-->
-
-                <!-- Première photo -->
-                    <div class="arrow-container">
-                        <img src="/img/arrow-right.png" class="arrow b-radius-top-r b-radius-bot-r" alt="fleche"  id="carrousel">
-                    </div>
-                <!--//////////////////////////////////-->
-            </div>
-
-            <div class="about-2 b-radius-top-r b-radius-bot-r" id="two">
-                <img src="img/bio-1.jpg" alt="" loading="lazy" class="image-one-carroussel" id="one-image">
-                <img src="img/bio-2.jpg" alt="" loading="lazy" class="image-two-carroussel" id="two-image" style="display: none;">
-                <img src="img/bio-3.jpg" alt="" loading="lazy" class="image-three-carroussel" id="three-image" style="display: none;">
-                <img src="img/bio-4.jpg" alt="" loading="lazy" class="image-four-carroussel" id="four-image" style="display: none;">
-            </div>
-        </div>
-
-    </section>
 
         <!-- About Section -->
-    <section id="projets" class="fade-in section-three-spc">
-        <!--<div class="image-bg-projets">
-
-        </div>-->
-
-        <!--<div class="explication">
-            <p>
-                Chacune des applications web présentées ci-dessous a été conçue dans le but de faciliter le quotidien et d'améliorer la qualité de vie des personnes travaillant à l'IUT de Chambéry. Autodidacte, j’ai assuré seul le développement de la quasi-totalité de ces projets. La plus récente, Fixly, est également la plus aboutie à ce jour.
-            </p>
-        </div>-->
-        <div class="all-projets marge-projet">
-            <ul class="ul-projet">
-                <li class="li-projet" id="projet-1">
-                    <div class="space-projet">
-                        <strong>Fixly</strong>
-                        <div class="global-pres">
-                            <div class="presentation">
-                                Fixly est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT de Chambéry sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les
-                                interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-                            </div>
-                            <div class="stack">
-                                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-                            </div>
-
-                            <div class="details">
-                                <a href="https://fixly.benapps.fr/" target="_blank" class="btn-details">Détails</a>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-        
-                <li class="li-projet" id="projet-2">
-                    <div class="space-projet">
-                        <strong>IUT-Absence</strong>
-                        <div class="global-pres">
-                            <div class="presentation">
-                                IUT-Absence est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les
-                                interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-                            </div>
-                            <div class="stack">
-                                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-                            </div>
-
-                            <div class="details">
-                                <a href="#" class="btn-details">Détails</a>
-                            </div>
-                        </div>  
-                    </div>
-                </li>
-        
-                <li class="li-projet" id="projet-3">
-                    <div class="space-projet">
-                        <strong>IUT-EDT</strong>
-                        <div class="global-pres">
-                            <div class="presentation">
-                                IUT-EDT est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les
-                                interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-                            </div>
-                            <div class="stack">
-                                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-                            </div>
-
-                            <div class="details">
-                                <a href="#" class="btn-details">Détails</a>
-                            </div>
-                        </div>
-                    
-                    </div>
-                </li>
-        
-                <li class="li-projet" id="projet-4">
-                    <div class="space-projet">
-                        <strong>IUT-Carton</strong>
-                        <div class="global-pres">
-                            <div class="presentation">
-                                IUT-Carton est une application web développée en Laravel permettant de gérer les problèmes informatiques au sein de l'IUT sous forme de tickets. Chaque ordinateur est équipé d’un QR Code unique que les utilisateurs peuvent scanner afin de signaler un dysfonctionnement. Le système génère un ticket qui permet de suivre l’historique de l’ordinateur et de centraliser les
-                                interventions. Grâce à l’interface d’administration, il est possible d’analyser les incidents par zone ou par machine à l’aide de statistiques visuelles.
-                            </div>
-                            <div class="stack">
-                                <em>Stack :</em> Laravel, Blade, Eloquent ORM, MySQL, Chart.js, API REST. Intégration avec FogProject.
-                            </div>
-
-                            <div class="details">
-                                <a href="#" class="btn-details">Détails</a>
-                            </div>
-                        </div>
-                    
-                    </div>
-                </li>
-            </ul>
-        </div>
-        
-    </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="fade-in section-four">
-          <div class="fond_1 gap-12 div-one">
-            <div class="hs">
-                <div id="border-me"></div>
-                <div class="container">
-                    <div class="explain">
-                        <h2>Benjamin FERRANDEZ</h2>
-                        <span>Developpeur Web | Beer-pong expert | Notions en réseau | Good English u Know</span>
-                    </div>
-                    <a href="mailto:benn.ferrandez@gmail.com" class="btn-a btn-contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </section>
+
 
     <!-- Footer -->
     <footer class="">
         <p>&copy; 2025 BenApps. Tous droits réservés.</p>
     </footer>
 </div>
+
+<script src="js/swiper-bundle.min.js"></script> 
+<script src="js/gestion_swipe.js"></script>   
+
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 
     .wrapper{
-        gap: 200px;
+        /* gap: 200px; */
     }
 
     .arrow
@@ -15,6 +15,25 @@
         left: unset;
         margin: 10px 0px 10px 0px;
     
+    }
+
+    .about-1 h2 {
+        font-size: 2.5rem;
+        text-align: left;
+    }
+
+    .projets-title h2 {
+        font-size: 2.5rem;
+        padding: 12px;
+        text-align: right;
+        /* width: 100%; */
+    }
+
+    .card-projet
+    {
+        width: 250px;
+        height: 190px;
+        /* height: ; */
     }
 
     .arrow-container
