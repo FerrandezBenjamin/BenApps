@@ -535,15 +535,6 @@ body::-webkit-scrollbar {
 
 }
 
-.projets-title
-{
-    font-size: 1.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex: 3;
-    padding: 35px;
-}
 
 .ul-projet {
     display: flex;
@@ -588,6 +579,7 @@ section#projets {
 
 .projets-title
 {
+    background-color: #f7f5f5;
     width: clamp(340px, 85%, 1050px);
     padding: 12px;
 }
@@ -642,9 +634,9 @@ section#projets {
 
 
 .card-projet:hover {
-    border-color: rgba(13, 47, 112, 0.974); /* fine bordure visible */
+    border-color: rgba(255, 255, 255, 0.974); /* fine bordure visible */
     background-color: rgba(255, 255, 255, 0.05); /* un peu plus clair au hover */
-    transform: scale(1.05);
+    transform: scale(1.02);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
     z-index: 1; /* pour passer au-dessus des autres */
 }
@@ -751,7 +743,7 @@ section#projets {
     justify-content: center;
     color: white;
     align-items: center;
-    transition: width 0.8s ease, height 0.8s ease;
+    transition: width 2.5s ease, height 1s ease;
 }
 
 .card-container.visible {
