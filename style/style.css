@@ -225,13 +225,13 @@ body::-webkit-scrollbar {
 
 .fade-in {
     opacity: 0;
-    /* transform: translateY(30px); */
-    transition: opacity 1s ease, transform 2s ease-in-out;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 1s ease-in-out;
 }
 
 .fade-in.visible {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(-100px);
 }
 
 .fade-in-base {
@@ -580,10 +580,10 @@ section#projets {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  background-color: #fbf1f1;
+  /* background-color: #fbf1f1; */
   justify-content: flex-start;
   align-items: center;
-  padding-top: 12px;
+  /* padding-top: 12px; */
   padding-bottom: 12px;
   gap: 45px;
   box-sizing: border-box;
@@ -591,10 +591,26 @@ section#projets {
 
 .projets-title
 {
-    background-color: #f7f5f550;
+    background-color: #f9f9fb;
     /* width: clamp(340px, 85%, 1050px); */
     width: 100%;
     padding: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.all-logo
+{
+    display: flex;
+    align-items: center;
+    flex: 8;
+    gap: 25px;
+}
+
+.all-logo img
+{
+    width: 90px;
+    /* height: 90px; */
 }
 
 .projets-title h2
@@ -609,6 +625,18 @@ section#projets {
 .all-projets {
   width: 100%;
   overflow: hidden; 
+}
+
+.whats
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 4rem;
+    text-align: justify;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 70px;
+    padding-right: 70px;
+    font-weight: 500;
 }
 
 .carroussel
