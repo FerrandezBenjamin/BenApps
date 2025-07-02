@@ -5,19 +5,18 @@ document.addEventListener("DOMContentLoaded", () => {
     slider.innerHTML += slider.innerHTML;
 
     let position = 0;
-    const speed = 0.2;
+    const speed = 1.2;
     let animationFrameId;
     let currentHoveredCard = null;
-    let buttonTimeoutId = null;
 
-    function animate() {
-        position -= speed;
-        if (Math.abs(position) >= slider.scrollWidth / 2) {
-            position = 0;
-        }
-        slider.style.transform = `translateX(${position}px)`;
-        animationFrameId = requestAnimationFrame(animate);
-    }
+    // function animate() {
+    //     position -= speed;
+    //     if (Math.abs(position) >= slider.scrollWidth / 2) {
+    //         position = 0;
+    //     }
+    //     slider.style.transform = `translateX(${position}px)`;
+    //     animationFrameId = requestAnimationFrame(animate);
+    // }
 
     function stopAnimation() {
         cancelAnimationFrame(animationFrameId);
@@ -74,16 +73,24 @@ document.addEventListener("DOMContentLoaded", () => {
         const maxW = div.parentElement.clientWidth;
         const maxH = div.parentElement.clientHeight;
 
-        const resizeToW = maxW - 20;
-        const resizeToH = maxH - 20;
+        const resizeToW = ((maxW - 45));
+        const resizeToH = maxH - 30;
 
         div.style.width = `${resizeToW}px`;
+        div.style.backgroundColor = `#00000000`;
         div.style.height = `${resizeToH}px`;
+        div.style.borderRadius = `0px`;
+        div.style.display = `flex`;
+        div.style.flexDirection = `column`;
+        div.style.gap = `15px`;
     }
 
     function resizeDivDown(div) {
-        div.style.width = `15px`;
-        div.style.height = `15px`;
+        div.style.width = `25px`;
+        div.style.height = `25px`;
+        div.style.backgroundColor = `#ffffff`;
+        div.style.borderRadius = `50px`;
+
     }
 
     // Démarrer l’animation automatique

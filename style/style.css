@@ -6,11 +6,13 @@
 }
 
 :root {
-  --bg-mode-base: linear-gradient(to bottom, rgb(36 29 75 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
-  --bg-mode-white:#ffffff;
-  --bg-mode-base-c:rgb(0 0 0 / 77%);
-  --text-white : white;
-  --text-black : black;
+    --bg-mode-base: linear-gradient(to bottom, rgb(36 29 75 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    --bg-mode-base-oh: linear-gradient(to bottom, rgb(10 68 166 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+
+    --bg-mode-white:#ffffff;
+    --bg-mode-base-c:rgb(0 0 0 / 77%);
+    --text-white : white;
+    --text-black : black;
 }
 
 .mode-base
@@ -624,11 +626,11 @@ section#projets {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-end;
+    align-items: flex-end;
     transition: transform 0.5s ease, box-shadow 0.3s ease, border-color 1s ease, background-color 0.3s ease;
     background-color: rgba(255, 255, 255, 0.03); /* léger contraste */
-    border: 1px solid transparent;
+    /* border: 1px solid transparent; */
     cursor: pointer;
 }
 
@@ -661,7 +663,7 @@ section#projets {
 {
     content: '';
     position: absolute;
-    background: #000000ab;
+    background-image: var(--bg-mode-base-oh);
     width: 100%;
     height: 100%;
     top: 0;
@@ -721,29 +723,46 @@ section#projets {
 {
     position: relative;
     width: 100%;
+    /* height: 100%;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
     color: white;
     text-align: center;
     font-size: 2.5rem;
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
     /* text-transform: uppercase; */
 
+}
+
+.expl
+{
+    color: white;
+    font-size: 0.8rem;
+    text-align: justify;
 }
 
 
 .card-container
 {
-    width: 15px;
-    height: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: white;
     border: 1px solid white;
     display: block;
     padding: 10px;
     overflow: hidden;
     z-index: 55;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 12px;
     justify-content: center;
-    color: white;
+    color: #000000;
     align-items: center;
-    transition: width 2.5s ease, height 1s ease;
+    margin-right: 25px;
+    margin-bottom: 10px;
+    transition: width 1s ease, height 0.5s ease, background-color 1s ease, border-radius 0.2s;
 }
 
 .card-container.visible {
@@ -755,7 +774,7 @@ section#projets {
 {
     padding: 12px;
     border-radius: 50px;
-    width: 55%;
+    width: 130px;
     height: 35px;
     color: black;
     background-color: white;
