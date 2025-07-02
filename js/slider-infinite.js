@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const maxW = div.parentElement.clientWidth;
         const maxH = div.parentElement.clientHeight;
 
-        const resizeToW = ((maxW - 45));
+        const resizeToW = ((maxW - 50));
         const resizeToH = maxH - 30;
 
         div.style.width = `${resizeToW}px`;

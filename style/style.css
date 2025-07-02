@@ -8,6 +8,10 @@
 :root {
     --bg-mode-base: linear-gradient(to bottom, rgb(36 29 75 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
     --bg-mode-base-oh: linear-gradient(to bottom, rgb(10 68 166 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    --bg-mode-base-p1: linear-gradient(to bottom, rgb(10 68 166 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    --bg-mode-base-p2: linear-gradient(to bottom, rgba(164, 53, 125, 0.51), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    --bg-mode-base-p3: linear-gradient(to bottom, rgb(10 166 44 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    --bg-mode-base-p4: linear-gradient(to bottom, rgba(190, 87, 23, 0.6), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
 
     --bg-mode-white:#ffffff;
     --bg-mode-base-c:rgb(0 0 0 / 77%);
@@ -663,11 +667,26 @@ section#projets {
 {
     content: '';
     position: absolute;
-    background-image: var(--bg-mode-base-oh);
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
+}
+
+#projet1.card-projet::before {
+  background-image: var(--bg-mode-base-p1);
+}
+
+#projet2.card-projet::before {
+  background-image: var(--bg-mode-base-p2);
+}
+
+#projet3.card-projet::before {
+  background-image: var(--bg-mode-base-p3);
+}
+
+#projet4.card-projet::before {
+  background-image: var(--bg-mode-base-p4);
 }
 
 .btn-details
