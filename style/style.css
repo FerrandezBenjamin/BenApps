@@ -134,9 +134,10 @@ section
 #titre
 {
     text-align: center;
-    font-size: 4rem;
+    font-size: 6.5rem;
     margin-top: 15px;
     margin-bottom: 15px;
+    font-weight: 400;
     /* color: white; */
 }
 
@@ -578,12 +579,27 @@ section#projets {
   overflow: hidden; 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 0;
+  gap: 25px;
   box-sizing: border-box;
 }
 
+.projets-title
+{
+    width: clamp(340px, 85%, 1050px);
+    padding: 12px;
+}
+
+.projets-title h2
+{
+    font-size: 6.5rem;
+    padding: 12px;
+    /* width: 100%; */
+    font-weight: 400;
+    text-align: right;
+}
 
 .all-projets {
   width: 100%;
@@ -949,7 +965,7 @@ section#projets {
     display: flex;
     gap: 15px;
     min-height: 50%;
-    width: clamp(340px, 85%, 1050px);
+    width: clamp(340px, 85%, 1200px);
     z-index: 3;
     background-color: white;
     border-radius: 8px;
@@ -984,9 +1000,11 @@ section#projets {
     background-position: center;
 }
 
-.about-1 h3
+.about-1 h2
 {
-    font-size: 2rem;
+    font-size: 6.5rem;
+    font-weight: 400;
+    /* text-align: center; */
 }
 
 .about-2
@@ -1135,7 +1153,7 @@ section#projets {
 
 .arrow-container img
 {
-    width: 40px;
+    width: 65px;
 }
 
 .jesuis,
