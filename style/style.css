@@ -443,7 +443,7 @@ section#projets {
   flex-direction: column;
   /* background-color: #fbf1f1; */
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-end;
   /* padding-top: 12px; */
   padding-bottom: 12px;
   gap: 45px;
@@ -452,12 +452,13 @@ section#projets {
 
 .projets-title
 {
-    background-color: #f9f9fb;
+    background-color: wheat;
     /* width: clamp(340px, 85%, 1050px); */
-    width: 100%;
+    width: 25%;
     padding: 12px;
     display: flex;
     justify-content: space-between;
+    text-align: right;
 }
 
 .all-logo
