@@ -45,7 +45,7 @@
 
 html {
     /* font-family: 'Quicksand', sans-serif; */
-        font-family: 'Cormorant Garamond', serif;
+    font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
     width: 100%;
     background-color:#c8f5d7;
@@ -1043,7 +1043,9 @@ section#projets {
 
 .whats
 {
-    font-size: 4rem;
+    /* font-size: 4rem; */
+    /* font-size: 500%; */
+    font-size: clamp(2rem, 7vw, 4rem);
     text-align: justify;
     padding-left: 70px;
     padding-right: 70px;
@@ -1078,7 +1080,8 @@ section#projets {
     /* justify-content: center; */
     padding: 12px;
     /* align-items: flex-start; */
-    font-size: 1.1rem;
+    /* font-size: 1.1rem; */
+    font-size: clamp(0.8rem, 2vw, 1.1rem);
     gap: 25px;
     /* min-height: 80%; */
     position: relative;
@@ -1102,7 +1105,7 @@ section#projets {
 
 .about-1 h2
 {
-    font-size: 6rem;
+    font-size: clamp(3rem, 6.5vw, 6rem);
     font-weight: 400;
     /* text-align: center; */
 }
@@ -1239,6 +1242,8 @@ section#projets {
     width: 100%;
     align-items: flex-end;
     flex-grow: 1;
+    position: absolute;
+    bottom: 0;
 }
 
 .arrow
@@ -1253,7 +1258,7 @@ section#projets {
 
 .arrow-container img
 {
-    width: 65px;
+    width: 45px;
 }
 
 .jesuis,

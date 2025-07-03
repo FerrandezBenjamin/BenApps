@@ -17,9 +17,18 @@
     
     }
 
+    .arrow-container img {
+        width: 35px;
+    }
+
     .about-1 h2 {
         font-size: 2.5rem;
         text-align: left;
+    }
+
+    .whats
+    {
+        font-size: 1.9rem;
     }
 
     .projets-title h2 {
@@ -120,11 +129,11 @@
     {
         font-size: 0.8rem;
     }
-
+/* 
     .about-1
     {
         font-size: 0.8rem;
-    }
+    } */
 
     .section-two
     {
