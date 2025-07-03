@@ -28,7 +28,8 @@
 
     .whats
     {
-        font-size: 1.9rem;
+        padding-left: 25px;
+        padding-right: 25px;
     }
 
     .projets-title h2 {
@@ -36,6 +37,18 @@
         padding: 12px;
         text-align: right;
         /* width: 100%; */
+    }
+
+    .about-1
+    {
+        height: 450px;
+    }
+
+
+    .me 
+    {
+        padding-bottom: unset;
+        padding-top: unset;
     }
 
     .card-projet
