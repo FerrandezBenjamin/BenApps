@@ -1,11 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
     var next = document.getElementById('carrousel');
-    const faders = document.querySelectorAll('.fade-in');
     const fadersBase = document.querySelectorAll('.fade-in-base');
+    const fadersBottom = document.querySelectorAll('.fade-in-bottom');
+    const fadersTop = document.querySelectorAll('.fade-in-top');
     const fadersLeft = document.querySelectorAll('.fade-in-left');
     const fadersRight = document.querySelectorAll('.fade-in-right');
-
-    console.log(fadersLeft);
 
     const options = {
         threshold: 0.1
@@ -23,11 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, options);
 
-    faders.forEach(section => {
+    fadersBase.forEach(section => {
         observer.observe(section);
     });
 
-    fadersBase.forEach(section => {
+    fadersBottom.forEach(section => {
         observer.observe(section);
     });
 
@@ -36,6 +35,10 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     fadersRight.forEach(section => {
+        observer.observe(section)
+    });
+
+    fadersTop.forEach(section => {
         observer.observe(section);
     });
 

@@ -26,11 +26,12 @@
     color: var(--text-white);
 }
 
-.btn-c-base a
+.btn-c-base
 {
-    color: var(--text-white);
-    font-size: 1.1rem;
+    /* width: clamp(350px, 60%, 800px); */
+    width: 100%;
 }
+
 
 .btn-c-white a
 {
@@ -172,16 +173,6 @@ body::-webkit-scrollbar {
   background: transparent;
 }
 
-.fade-in {
-    opacity: 0;
-    transform: translateY(100px);
-    transition: opacity 2s ease, transform 1s ease-in-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0px);
-}
 
 .fade-in-base {
     opacity: 0;
@@ -195,11 +186,35 @@ body::-webkit-scrollbar {
     /* transform: translateY(0); */
 }
 
+.fade-in-bottom {
+    opacity: 0;
+    transform: translateY(100px);
+    transition: opacity 2s ease, transform 1s ease-in-out;
+}
+
+.fade-in-bottom.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+.fade-in-top {
+    opacity: 0;
+    transform: translateY(-100px);
+    transition: opacity 2s ease, transform 1s ease-in-out;
+}
+
+.fade-in-top.visible {
+    opacity: 1;
+    transform: translateY(0px);
+}
+
+
+
 .fade-in-left {
   opacity: 0;
   /* transform: translateX(-100vw); */
   transform: translateX(-30vw);
-  transition: opacity 1.2s ease, transform 1.2s ease-out;
+  transition: opacity 1.8s ease, transform 1.2s ease-out;
   will-change: transform, opacity;
 }
 
@@ -212,7 +227,7 @@ body::-webkit-scrollbar {
   opacity: 0;
   /* transform: translateX(-100vw); */
   transform: translateX(30vw);
-  transition: opacity 1.2s ease, transform 1.2s ease-out;
+  transition: opacity 1.8s ease, transform 1.2s ease-out;
   will-change: transform, opacity;
 }
 
@@ -343,8 +358,8 @@ body::-webkit-scrollbar {
     padding: 7px 12px;
     min-width: 94px;
     text-align: center;
-    /* transition: transform 2s ease; */
-    /* transition: background-color 0.2s ease, transform 0.2s ease; */
+    color: var(--text-white);
+    font-size: clamp(0.9rem, 1.2vw, 2.5rem);
 }
 
 .btn-a:hover
@@ -548,15 +563,15 @@ section#projets {
 }
 
 #projet2.card-projet::before {
-  background-image: var(--bg-mode-base-p2);
+  background-image: var(--bg-mode-base-p1);
 }
 
 #projet3.card-projet::before {
-  background-image: var(--bg-mode-base-p3);
+  background-image: var(--bg-mode-base-p1);
 }
 
 #projet4.card-projet::before {
-  background-image: var(--bg-mode-base-p4);
+  background-image: var(--bg-mode-base-p1);
 }
 
 
@@ -826,7 +841,7 @@ section#projets {
     padding-left: 70px;
     padding-right: 70px;
     font-weight: 500;
-    height: 500px;
+    height: 600px;
     display: flex;
     z-index: 2;
     color: black;
@@ -838,14 +853,34 @@ section#projets {
     font-family: 'Cormorant Garamond', serif;
 }
 
-.whats span
+.listen_cat
+{
+    font-style: italic;
+    font-weight: 100;
+}
+
+
+.talking_cat
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-bottom: 8px solid wheat;
+    /* font-style: italic; */
+    padding: 10px;
+
+}
+
+
+.then_isGPT
 {
     position: absolute;
     display: block;
     bottom: 10px;
-    right: 25px;
+    left: 25px;
     font-size: 1rem;
     font-style:italic;
+    background-color: wheat;
 }
 
 .about-1

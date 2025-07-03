@@ -1,7 +1,6 @@
 @media (max-width: 576px) {
     /* Styles pour les très petits écrans */
 
-
     .wrapper{
         /* gap: 200px; */
     }
@@ -30,6 +29,7 @@
     {
         padding-left: 25px;
         padding-right: 25px;
+        height: 500px;
     }
 
     .projets-title h2 {
@@ -79,10 +79,10 @@
         height: 100%;
     }
 
-    .btn-a
+    /* .btn-a
     {
         font-size: 0.8rem;
-    }
+    } */
 
     #border-me
     {
