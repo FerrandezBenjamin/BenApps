@@ -200,7 +200,7 @@ section
 .fade-in-bottom {
     opacity: 0;
     transform: translateY(200px);
-    transition: opacity 1.7s ease, transform 1s ease-in-out;
+    transition: opacity 1s ease, transform 1s ease-in-out;
 }
 
 .fade-in-bottom.visible {
