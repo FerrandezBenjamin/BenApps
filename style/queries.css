@@ -5,6 +5,11 @@
         /* gap: 200px; */
     }
 
+    .img-2
+    {
+        display: none;
+    }
+
     .arrow
     {
         text-align: center;
