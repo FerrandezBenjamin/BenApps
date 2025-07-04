@@ -47,15 +47,17 @@ body
 
 .mode-base
 {
+    background: var(--bg-mode-white);
+    color: var(--text-black);
+
+}
+
+.mode-base-2
+{
+
     background-color: var(--bg-mode-base-c);
     background-image :var(--bg-mode-base);
     color: var(--text-white);
-}
-
-.mode-white
-{
-    background: var(--bg-mode-white);
-    color: var(--text-black);
 }
 
 
@@ -111,6 +113,7 @@ section
 }
 
 .section-two,
+.section-three,
 .section-four
 {
     color: white;
@@ -127,13 +130,13 @@ section
     background: #ffffff;
 }
 
-.section-three-spc
+/* .section-three-spc
 {
     color: rgb(0, 0, 0);
     z-index: 2;
     gap: 15px;
     display: flex;
-}
+} */
 
 .explication
 {
@@ -147,6 +150,12 @@ section
 {
     padding: 35px;
 }
+
+.section-three
+{
+    margin-top: 120px;
+}
+
 
 #titre
 {
@@ -448,7 +457,7 @@ section#projets {
   align-items: flex-end;
   /* padding-top: 12px; */
   padding-bottom: 12px;
-  gap: 45px;
+  gap: 5px;
   box-sizing: border-box;
 }
 
@@ -520,6 +529,8 @@ section#projets {
     /* width: 25%; */
     padding: 12px;
     display: flex;
+    width: 100%;
+    color: black;
     justify-content: space-between;
     text-align: right;
 }
@@ -887,7 +898,7 @@ section#projets {
     z-index: 3;
     /* background-color: white; */
     border-radius: 8px;
-    margin-bottom: 120px;
+    /* margin-bottom: 120px; */
 }
 
 .me
@@ -895,7 +906,7 @@ section#projets {
     display: flex;
     padding-top: 120px;
     gap: 25px;
-    padding-bottom: 120px;
+    padding-bottom: 80px;
 }
 
 .whats
@@ -964,6 +975,8 @@ section#projets {
     /* bottom: 10px; */
     /* left: 25px; */
     font-size: 1rem;
+    margin-left: 10px;
+    margin-bottom: 10px;
     font-style:italic;
     background-color: wheat;
 }
@@ -1089,7 +1102,7 @@ section#projets {
     cursor: pointer;
     bottom: unset;
     left: unset;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 10px 10px 0px;
 }
 
 .arrow-container img
