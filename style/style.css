@@ -487,6 +487,16 @@ section#projets {
     height: 1550px;
 }
 
+.text-wheat
+{
+    background-color: wheat;
+}
+
+.bold-me
+{
+    font-weight: bold;
+}
+
 .img-3
 {
     opacity: 0.05;
