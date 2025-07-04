@@ -52,21 +52,21 @@ body
     color: var(--text-white);
 }
 
+.mode-white
+{
+    background: var(--bg-mode-white);
+    color: var(--text-black);
+}
+
+
 .btn-c-base
 {
     /* width: clamp(350px, 60%, 800px); */
     width: 100%;
 }
 
-
 .btn-c-white a
 {
-    color: var(--text-black);
-}
-
-.mode-white
-{
-    background: var(--bg-mode-white);
     color: var(--text-black);
 }
 
@@ -900,10 +900,10 @@ section#projets {
 
 .whats
 {
-    font-size: clamp(2rem, 7vw, 4rem);
+
     text-align: justify;
-    padding-left: 70px;
-    padding-right: 70px;
+    /* padding-left: 70px;
+    padding-right: 70px; */
     font-weight: 500;
     height: 600px;
     display: flex;
@@ -911,37 +911,58 @@ section#projets {
     color: black;
     border-top: 1px solid rgb(203, 196, 196);
     border-bottom: 1px solid rgb(203, 196, 196);
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
     position: relative;
     font-family: 'Cormorant Garamond', serif;
 }
 
+.talking_cat
+{
+    font-size: clamp(2.5rem, 7vw, 4rem);
+}
+
 .listen_cat
 {
+    /* margin-top: 18px; */
     font-style: italic;
     font-weight: 100;
+    font-size: clamp(2rem, 7vw, 4rem);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-grow: 1;
+    padding-left: 70px;
+    padding-right: 70px;
 }
 
 
 .talking_cat
 {
-    position: absolute;
-    top: 0;
-    right: 0;
-    border-bottom: 8px solid wheat;
+    /* position: absolute; */
+    /* top: 0; */
+    /* right: 0; */
+
     /* font-style: italic; */
     padding: 10px;
+    width: 100%;
+    text-align: right;
 
+}
+
+.talking_cat span
+{
+    border-bottom: 8px solid wheat;
 }
 
 
 .then_isGPT
 {
-    position: absolute;
+    /* position: absolute; */
     display: block;
-    bottom: 10px;
-    left: 25px;
+    /* bottom: 10px; */
+    /* left: 25px; */
     font-size: 1rem;
     font-style:italic;
     background-color: wheat;
@@ -1058,6 +1079,7 @@ section#projets {
     flex-grow: 1;
     position: absolute;
     bottom: 0;
+    left: 0;
 }
 
 .arrow
