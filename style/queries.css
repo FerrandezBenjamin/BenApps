@@ -37,6 +37,11 @@
         height: 500px;
     }
 
+    .listen_cat
+    {
+        padding: unset;
+    }
+
     .projets-title h2 {
         font-size: 2.5rem;
         padding: 12px;

@@ -33,7 +33,7 @@ html {
     /* font-family: 'Quicksand', sans-serif; */
     font-family: 'Cormorant Garamond', serif;
     font-size: 15px;
-    width: 100vw;
+    /* width: 100vw; */
     background-color:#ffffff;
     /* height: 100vh; */
 }
@@ -435,16 +435,9 @@ section
     bottom: 85px;
     width: 190px;
     font-size: 1.4rem;
+    color: black;
 }
 
-#dev
-{
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    font-size: 0.8rem;
-    font-style: italic;
-}
 
 section#projets {
   width: 100%;
@@ -1184,4 +1177,31 @@ hr
     border-top: 1px solid #eee;
     margin-bottom: 25px;
     margin-top: 25px;
+}
+
+#dev
+{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 0.8rem;
+    font-style: italic;
+}
+
+.place-waiting
+{
+    width: 100%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.course
+{
+    position: relative;
+    color: black;
+    font-size: 2rem;
+    font-style: italic;
 }
