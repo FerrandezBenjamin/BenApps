@@ -1,11 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
     var next = document.getElementById('carrousel');
-    const faders = document.querySelectorAll('.fade-in');
     const fadersBase = document.querySelectorAll('.fade-in-base');
+    const fadersBottom = document.querySelectorAll('.fade-in-bottom');
+    const fadersTop = document.querySelectorAll('.fade-in-top');
+    const fadersLeft = document.querySelectorAll('.fade-in-left');
+    const fadersRight = document.querySelectorAll('.fade-in-right');
+
     const options = {
         threshold: 0.1
     };
-    const sections = ['principal', 'about','projets', 'contact'];
+    const sections = ['principal', 'about', 'cat','projets', 'contact'];
     const scrollButtonA = document.getElementById('scroll-button');
     // const scrollButtonT = document.getElementById('scroll-button-top');
 
@@ -18,11 +22,23 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, options);
 
-    faders.forEach(section => {
+    fadersBase.forEach(section => {
         observer.observe(section);
     });
 
-    fadersBase.forEach(section => {
+    fadersBottom.forEach(section => {
+        observer.observe(section);
+    });
+
+    fadersLeft.forEach(section => {
+        observer.observe(section);
+    });
+
+    fadersRight.forEach(section => {
+        observer.observe(section)
+    });
+
+    fadersTop.forEach(section => {
         observer.observe(section);
     });
 
@@ -120,6 +136,7 @@ document.addEventListener("DOMContentLoaded", function () {
         let nextSection = null;
 
         for (const id of sections) {
+            console.log(id)
             const elem = document.getElementById(id);
             const elemTop = elem.getBoundingClientRect().top + window.scrollY;
 

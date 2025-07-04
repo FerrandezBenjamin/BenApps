@@ -1,9 +1,13 @@
 @media (max-width: 576px) {
     /* Styles pour les très petits écrans */
 
-
     .wrapper{
         /* gap: 200px; */
+    }
+
+    .img-2
+    {
+        display: none;
     }
 
     .arrow
@@ -17,9 +21,25 @@
     
     }
 
+    .arrow-container img {
+        width: 35px;
+    }
+
     .about-1 h2 {
         font-size: 2.5rem;
         text-align: left;
+    }
+
+    .whats
+    {
+        padding-left: 25px;
+        padding-right: 25px;
+        height: 500px;
+    }
+
+    .listen_cat
+    {
+        padding: unset;
     }
 
     .projets-title h2 {
@@ -27,6 +47,18 @@
         padding: 12px;
         text-align: right;
         /* width: 100%; */
+    }
+
+    .about-1
+    {
+        height: 450px;
+    }
+
+
+    .me 
+    {
+        padding-bottom: unset;
+        padding-top: unset;
     }
 
     .card-projet
@@ -57,10 +89,10 @@
         height: 100%;
     }
 
-    .btn-a
+    /* .btn-a
     {
         font-size: 0.8rem;
-    }
+    } */
 
     #border-me
     {
@@ -120,16 +152,16 @@
     {
         font-size: 0.8rem;
     }
-
+/* 
     .about-1
     {
         font-size: 0.8rem;
-    }
+    } */
 
-    .section-two
+    /* .section-two
     {
         padding: unset;
-    }
+    } */
 
     .all-about
     {

@@ -12,6 +12,8 @@
     <link rel="preload" as="image" href="img/bio-4.jpg">
     <link rel="icon" type="image/vnd.icon" href="img/benicone.ico">
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lora:wght@400;500;700&display=swap" rel="stylesheet">
+
     
     <script src="js/script.js"></script>
     <script src="js/switch-mode.js"></script>
@@ -21,7 +23,7 @@
 <body>
 
     <div class="can-scroll-down">
-        <img src="/img/arrow-down-white.png" class="arrow-down" alt="flechebas" id="scroll-button">
+        <img src="/img/arrow-down.png" class="arrow-down" alt="flechebas" id="scroll-button">
     </div>
 
     <span class="switch">
@@ -35,11 +37,10 @@
     <section id="principal" class="section-one mode-base">
 
         <div class="accueil fade-in-base" id="accueil">
-            <!--<div id="liseret"></div>-->
 
             <h1 id="titre">Benjamin FERRANDEZ</h1>
             
-            <div class="f-center gap-me z-index-2 btn-c-base" id="contain_btn">
+            <div class="f-center gap-me z-index-2 btn-c-white" id="contain_btn">
                 <a href="#about" class="btn-a">A propos</a>
                 <a href="#projets" class="btn-a">Mes projets</a>
                 <a href="#contact" class="btn-a">Contact</a>
@@ -54,8 +55,213 @@
 
 
 
-        <!-- About Section -->
+    <!-- About -->
+    <section id="about" class="section-two">
 
+        <div class="img-2">
+            <img src="img/img-4.svg" alt="image-one">
+        </div>
+        <div class="all-about fade-in-bottom">
+            <div class="me">
+                <div class="about-1 mode-base">
+
+                    <!-- Explication de moi -->
+                        <div class="explain-me">
+                            <div class="jesuis" id="one-text">
+
+                                <h2 class="bold-me text-wheat">Je suis..</h2>
+
+                                <p>
+                                    Né en <span class="text-wheat bold-me">Savoie</span>, en janvier 1995. J'ai grandi ici, entre montagnes et lacs.  
+                                    Aujourd'hui, j'habite dans une petite commune proche de Chambéry. 
+                                    Le cadre est calme, et reposant. J'apprécie la qualité de vie,  
+                                    l'air pur et les paysages, tout en restant connecté.
+                                </p>
+                                
+                                <p>
+                                    On dit souvent de moi que je suis méthodique et fiable. J’aime aller au fond des choses, <span class="text-wheat bold-me">comprendre</span> les mécanismes,
+                                    les logiques cachées derrière ce qui nous entoure. Mon esprit curieux me pousse constamment à <span class="text-wheat bold-me">apprendre</span> et à explorer.
+                                    Le sport a occupé une grande place dans ma vie, il m’a transmis des valeurs solides : sens de l’engagement, goût de l’effort, et une <span class="text-wheat bold-me">persévérance</span> à toute épreuve.
+                                </p>
+                            </div>
+
+                            <div class="ecole" id="two-text" style="display: none">
+                                <h2 class="text-wheat bold-met">Mes études</h2>
+                                <p>
+                                    J’ai repris mes études en 2020 avec un <span class="text-wheat bold-me">DU</span> au Campus Numérique, qui m’a permis d’acquérir des bases solides. J’ai ensuite poursuivi avec une <span class="text-wheat bold-me">licence</span> en Informatique aux Charmilles, où j’ai approfondi mes connaissances, notamment en réseau et en informatique générale. Toujours animé par l’envie d’apprendre, j’ai intégré un <span class="text-wheat bold-me">Master</span> en Ingénierie Informatique et Systèmes d’Information à l’EPSI.    
+                                </p>
+                                
+                                <p>
+                                    Chaque école m’a apporté une richesse particulière : le Campus Numérique m’a initié au développement, les Charmilles l'informatique au sens large — et le master m’a ouvert aux notions de management et de systèmes d'information.
+                                </p>
+                            </div>
+
+                            <div class="jeuxvideo" id="three-text" style="display: none">
+                                <h2 class="text-wheat bold-me">Les jeux !</h2>
+                                <p>
+                                    Entre deux lignes de code, je me détends sur des jeux en ligne, seul ou avec des amis. J’ai aussi monté ma propre config — une expérience que je recommande <span class="text-wheat bold-me">à tous !</span>
+                                </p>
+                                
+                                    <ul class="ul-me"> <strong>Configuration :</strong>
+                                        <li> Carte mère : Asus rog STRIX B650E-F</li>
+                                        <li> Processeur : Ryzen 7800X3D</li>
+                                        <li> Carte graphique : Nvidia RTX 4060Ti (16G)</li>
+                                        <li> RAM : Corsair Vengeance DDR5 (16G x2)</li>
+                                        <li> Alimentation : Corsair RM850x 80 plus gold </li>
+                                        <li> Boitier : Deepcool CH650 Digital </li>
+                                        <li> Ventirad : DeepCool LS720 SE 360mn </li>
+                                        <li> Clavier : Apex Pro steelSeries</li>
+                                        <li> Souris : SteelSeries Rival 5</li>
+                                    </ul>
+                                </p>
+                            </div>
+
+                            <div class="fetardunpeu" id="four-text" style="display: none">
+                                <h2 class="text-wheat bold-me">La fête..</h2>
+                                <p>
+                                    Il faut bien relâcher la pression entre deux compilations qui plantent. Je profite de ces moments pour changer de cadre, passer du mode “débogage” au mode “déconnexion totale”, et souvent <span class="text-wheat bold-me">rigoler</span> jusqu’à ne plus sentir mes joues. 
+                                </p>
+                                
+                                <p>
+                                    Certains sortent leur meilleure tenue, moi je mise tout sur mon stock de playlists douteuses et mon expertise en <span class="text-wheat bold-me">Beer-pong</span> (franchement je suis pas mauvais quoi)
+                                    Ce n’est pas qu’une simple pause : c’est un bon rappel que <span class="text-wheat bold-me">l’équilibre</span>, ça passe aussi par ces instants spontanés, imparfaits, mais <span class="text-wheat bold-me">sincères</span>.
+                                </p>
+                            </div>
+                        </div>
+                    <!--//////////////////////////////////-->
+
+                    <!-- Première photo -->
+                        <div class="arrow-container">
+                            <img src="/img/arrow-right.png" class="arrow b-radius-top-r b-radius-bot-r" alt="fleche"  id="carrousel">
+                        </div>
+                    <!--//////////////////////////////////-->
+                </div>
+
+                <div class="about-2 b-radius-top-r b-radius-bot-r" id="two">
+                    <img src="img/bio-1.jpg" alt="" loading="lazy" class="image-one-carroussel" id="one-image">
+                    <img src="img/bio-2.jpg" alt="" loading="lazy" class="image-two-carroussel" id="two-image" style="display: none;">
+                    <img src="img/bio-3.jpg" alt="" loading="lazy" class="image-three-carroussel" id="three-image" style="display: none;">
+                    <img src="img/bio-4.jpg" alt="" loading="lazy" class="image-four-carroussel" id="four-image" style="display: none;">
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- Le Cat -->
+    <section id="cat" class="section-two">
+        <div class="whats fade-in-bottom mode-base" >
+            <div class="talking_cat">
+                <span>
+                    Citation stimulante d'un chat..
+                </span>
+            </div>
+            <div class="listen_cat">
+                "Si la vie était un jeu vidéo, je serais ce personnage qui n’a pas lu le tutoriel mais appuie sur tous les boutons avec enthousiasme."
+            </div>
+
+            <div class="then_isGPT">@ChatGPT.</div>
+        </div>
+    </section>
+
+
+
+        <!-- About Section -->
+    <section id="projets" class="section-three bg-white">
+
+         <!--<div class="img-3">
+            <img src="img/img-3.svg" alt="image-one">
+        </div>-->
+
+        <div class="projets-title fade-in-bottom">
+            <div>
+                <h2>Projets</h2>
+            </div>
+        </div>
+
+
+        <div class="all-projets fade-in-bottom">
+            <!-- Swiper wrapper -->
+            <div class="carroussel">
+                <div class="carroussel-slider" id="slider">
+
+                    <div class="card-projet projet-1" id="projet1">
+                            <div class="card-container">
+
+                                <div class="card-title">
+                                    Fixly
+                                </div>
+
+                                <div class="expl">
+                                    <p>Petite explications rapide de ce qu'est l'application</p>
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn-details-projet">Voir les détails</a>
+                                </div>
+                            </div>
+                    </div>
+
+                    <div class="card-projet projet-2" id="projet2">
+
+                        <div class="card-container">
+                            <div class="card-title">
+                                IUT-Absence
+                            </div>
+                            <div class="expl">
+                                <p>Petite explications rapide de ce qu'est l'application</p>
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-details-projet">Voir les détails</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-projet projet-3" id="projet3">
+                        <div class="card-container">
+                            <div class="card-title">
+                                IUT-EDT
+                            </div>
+                            <div class="expl">
+                                <p>Petite explications rapide de ce qu'est l'application</p>
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-details-projet">Voir les détails</a>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="card-projet projet-4" id="projet4">
+                        <div class="card-container">
+
+
+                        <div class="card-title">
+                            IUT-Carton
+                        </div>
+
+
+                            <div class="expl">
+                                <p>Petite explications rapide de ce qu'est l'application</p>
+                            </div>
+                            <div class="card-button">
+                                <a href="#" class="btn-details-projet">Voir les détails</a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="place-waiting">
+            <div class="course text-wheat bold-me ">
+                Eh c'est en cours de Dev j'ai dis...
+            </div>
+        </div>
+
+        
+    </section>
     <!-- Contact Section -->
 
 

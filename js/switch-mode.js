@@ -11,20 +11,20 @@ document.addEventListener('DOMContentLoaded', () => {
         if(principal.classList.contains('mode-base'))
         {
             principal.classList.remove('mode-base');
-            principal.classList.add('mode-white');
-
-            contain_btn_a.classList.remove('btn-c-base');
-            contain_btn_a.classList.add('btn-c-white');
-
-            arrow.src="../img/arrow-down.png";
-        } else {
-            principal.classList.remove('mode-white');
-            principal.classList.add('mode-base');
+            principal.classList.add('mode-base-2');
 
             contain_btn_a.classList.remove('btn-c-white');
             contain_btn_a.classList.add('btn-c-base');
 
             arrow.src="../img/arrow-down-white.png";
+        } else {
+            principal.classList.remove('mode-base-2');
+            principal.classList.add('mode-base');
+
+            contain_btn_a.classList.remove('btn-c-base');
+            contain_btn_a.classList.add('btn-c-white');
+
+            arrow.src="../img/arrow-down.png";
         }
     });
 });
