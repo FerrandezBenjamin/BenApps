@@ -8,7 +8,9 @@
 :root {
     --bg-mode-base: linear-gradient(to bottom, rgb(36 29 75 / 80%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
     --bg-mode-base-oh: linear-gradient(to bottom, rgb(10 68 166 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
-    --bg-mode-base-p1: linear-gradient(to bottom, rgba(67, 64, 64, 0.704), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
+    /* --bg-mode-base-p1: linear-gradient(to bottom, rgba(67, 64, 64, 0.704), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(87, 84, 84, 0.1), transparent 80%); */
+    --bg-mode-base-p1: linear-gradient(to bottom, rgba(35, 35, 45, 0.85), rgba(0, 0, 10, 0.95)), 
+  radial-gradient(circle at center, rgba(60, 60, 70, 0.15), transparent 80%);
     --bg-mode-base-p2: linear-gradient(to bottom, rgba(164, 53, 125, 0.51), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
     --bg-mode-base-p3: linear-gradient(to bottom, rgb(10 166 44 / 60%), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
     --bg-mode-base-p4: linear-gradient(to bottom, rgba(190, 87, 23, 0.6), rgba(0, 0, 0, 0.95)), radial-gradient(circle at center, rgba(255, 255, 255, 0.1), transparent 80%);
@@ -573,20 +575,12 @@ section#projets {
 }
 
 
-#projet1.card-projet::before {
-  background-image: var(--bg-mode-base-p1);
-}
-
-#projet2.card-projet::before {
-  background-image: var(--bg-mode-base-p1);
-}
-
-#projet3.card-projet::before {
-  background-image: var(--bg-mode-base-p1);
-}
-
+#projet1.card-projet::before,
+#projet2.card-projet::before,
+#projet3.card-projet::before,
 #projet4.card-projet::before {
   background-image: var(--bg-mode-base-p1);
+  opacity: 0.9;
 }
 
 .card-projet:hover {
