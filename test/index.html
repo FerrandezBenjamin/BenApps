@@ -1,52 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scroll Smooth</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: sans-serif;
+    }
+    section {
+      height: 100vh;
+      padding: 2rem;
+      box-sizing: border-box;
+    }
+    .one { background: #f2f2f2; }
+    .two { background: #ccc; }
+    .three { background: #999; }
+  </style>
+</head>
+<body>
+  <section class="one">Section 1</section>
+  <section class="two">Section 2</section>
+  <section class="three">Section 3</section>
 
+  <script src="https://unpkg.com/@studio-freight/lenis"></script>
+  <script>
+    const lenis = new Lenis({
+      duration: 1.5, // Durée de l'inertie (plus c'est élevé, plus ça "ralentit")
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // effet easing
+      smooth: true,
+      smoothWheel: true,
+      smoothTouch: false,
+    });
 
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
 
-
-
-
-
-
-<div class="carousel">
-  <div class="carousel-track">
-    <div class="slide">Projet 1</div>
-    <div class="slide">Projet 2</div>
-    <div class="slide">Projet 3</div>
-    <div class="slide">Projet 4</div>
-
-    <!-- duplication pour effet de loop -->
-    <div class="slide">Projet 1</div>
-    <div class="slide">Projet 2</div>
-    <div class="slide">Projet 3</div>
-    <div class="slide">Projet 4</div>
-  </div>
-</div>
-
-<style>
-.carousel {
-  overflow: hidden;
-  width: 100%;
-}
-
-.carousel-track {
-  display: flex;
-  width: max-content;
-  animation: scroll-left 30s linear infinite;
-}
-
-.slide {
-  min-width: 300px;
-  margin-right: 40px;
-  background: #f5f5f5;
-  padding: 1rem;
-  border-radius: 10px;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-</style>
+    requestAnimationFrame(raf);
+  </script>
+</body>
+</html>

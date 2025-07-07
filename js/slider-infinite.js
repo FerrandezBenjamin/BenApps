@@ -30,12 +30,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const buttonWrapper = card.querySelector(".card-button");
         if (buttonWrapper) {
-            // Affiche et active les clics
+
             buttonWrapper.style.opacity = "1";
             buttonWrapper.style.transform = "translateY(0)";
-            buttonWrapper.style.pointerEvents = "auto"; // ✅ clic activé
+            buttonWrapper.style.pointerEvents = "auto"; 
 
-            // Applique animation si besoin
+
             buttonWrapper.style.transition = "opacity 0.3s ease, transform 0.3s ease";
         }
     }
@@ -45,12 +45,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const buttonWrapper = card.querySelector(".card-button");
         if (buttonWrapper) {
-            // Réduit l’opacité et désactive les clics après anim
+
             buttonWrapper.style.opacity = "0";
             buttonWrapper.style.transform = "translateY(10px)";
-            buttonWrapper.style.pointerEvents = "none"; // ✅ clic désactivé
+            buttonWrapper.style.pointerEvents = "none"; 
         }
     }
 
     animate();
+
 });
