@@ -526,6 +526,7 @@ section#projets {
     color: black;
     justify-content: space-between;
     text-align: right;
+    height: 100px;
 }
 
 .all-logo
@@ -544,7 +545,7 @@ section#projets {
 
 .projets-title h2
 {
-    font-size: 6.5rem;
+    font-size: clamp(2.5rem, 7vw, 4rem);
     padding: 12px;
     /* width: 100%; */
     font-weight: 400;
