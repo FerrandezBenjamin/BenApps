@@ -1,13 +1,14 @@
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.getElementById("slider");
 
-    // Duplique le contenu pour créer l’effet infini
+    // Duplique le contenu pour effet infini
     slider.innerHTML += slider.innerHTML;
 
     let position = 0;
-    const speed = 1.2;
+    let speed = 1.2; // vitesse normale
+    const normalSpeed = 1.2;
+    const slowSpeed = normalSpeed * 0.05; // 5% = 95% de ralentissement
     let animationFrameId;
-    let currentHoveredCard = null;
 
     function animate() {
         position -= speed;
@@ -18,81 +19,44 @@ document.addEventListener("DOMContentLoaded", () => {
         animationFrameId = requestAnimationFrame(animate);
     }
 
-    function stopAnimation() {
-        cancelAnimationFrame(animationFrameId);
-    }
-
-    function startAnimation() {
-        animate();
-    }
-
-    function handleCardHover(card) {
-        currentHoveredCard = card;
-        // const content = card.querySelector(".card-container");
-        // const button = card.querySelector(".card-button");
-
-        // content.classList.add("visible");
-
-
-        // buttonTimeoutId = setTimeout(() => {
-        //     if (button) button.classList.add("visible");
-        // }, 600);
-
-        stopAnimation();
-    }
-
-    function handleCardLeave(card) {
-        currentHoveredCard = null;
-        // const content = card.querySelector(".card-container");
-        // const button = card.querySelector(".card-button");
-
-        // content.classList.remove("visible");
-
-        // Retirer immédiatement le bouton + clear le timeout
-        // clearTimeout(buttonTimeoutId);
-        // if (button) button.classList.remove("visible");
-
-        startAnimation();
-    }
-
-    // Ajouter les listeners de hover classiques sur chaque carte projet
     const cards = slider.querySelectorAll(".card-projet");
+
     cards.forEach((card) => {
-        card.addEventListener("mouseenter", () => handleCardHover(card));
-        card.addEventListener("mouseleave", () => handleCardLeave(card));
+        card.addEventListener("mouseenter", () => trueButton(card));
+        card.addEventListener("mouseleave", () => falseButton(card));
     });
 
-    // Ajouter les listeners pour redimensionner les .card-container au survol
-    const containers = slider.querySelectorAll(".card-container");
-    containers.forEach((card) => {
-        card.addEventListener("mouseenter", () => resizeDivUp(card));
-        card.addEventListener("mouseleave", () => resizeDivDown(card));
-    });
+    function trueButton(card) {
+        speed = slowSpeed;
 
-    function resizeDivUp(div) {
-        const maxW = div.parentElement.clientWidth;
-        const maxH = div.parentElement.clientHeight;
+        const buttonWrapper = card.querySelector(".card-button");
+        if (buttonWrapper) {
+            buttonWrapper.classList.remove("hidden");
 
-        const resizeToW = ((maxW - 50));
-        const resizeToH = maxH - 30;
+            // Animation JS du bouton
+            buttonWrapper.style.opacity = "0";
+            buttonWrapper.style.transform = "translateY(10px)";
+            buttonWrapper.style.transition = "opacity 0.3s ease, transform 0.3s ease";
 
-        div.style.width = `${resizeToW}px`;
-        div.style.backgroundColor = `#00000000`;
-        div.style.height = `${resizeToH}px`;
-        div.style.borderRadius = `0px`;
-        div.style.display = `flex`;
-        div.style.flexDirection = `column`;
-        div.style.gap = `15px`;
+            requestAnimationFrame(() => {
+                buttonWrapper.style.opacity = "1";
+                buttonWrapper.style.transform = "translateY(0)";
+            });
+        }
     }
 
-    function resizeDivDown(div) {
-        div.style.width = `25px`;
-        div.style.height = `25px`;
-        div.style.backgroundColor = `#ffffff`;
-        div.style.borderRadius = `50px`;
+    function falseButton(card) {
+        speed = normalSpeed;
 
+        const buttonWrapper = card.querySelector(".card-button");
+        if (buttonWrapper) {
+            buttonWrapper.style.opacity = "0";
+            buttonWrapper.style.transform = "translateY(10px)";
+            setTimeout(() => {
+                buttonWrapper.classList.add("hidden");
+            }, 300); // Durée de la transition
+        }
     }
 
-    // Démarrer l’animation automatique
-    animate();
+    animate(); // démarrage du carrousel
 });
