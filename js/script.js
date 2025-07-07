@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // const fadersLeft = document.querySelectorAll('.fade-in-left');
     // const fadersRight = document.querySelectorAll('.fade-in-right');
     const principalSection = document.getElementById('principal');
-    const sections = ['principal', 'about', 'cat','projets', 'contact'];
+    const sections = ['principal', 'about','projets', 'cat', 'contact'];
     const scrollButtonA = document.getElementById('scroll-button');
     // const scrollButtonT = document.getElementById('scroll-button-top');
     const scrollUpBtn = document.getElementById('scroll-button-top');
