@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
     let position = 0;
     let speed = 1.2;
     const normalSpeed = 1.2;
-    const slowSpeed = normalSpeed * 0.05;
+    const slowSpeed = normalSpeed * 0.2;
     let animationFrameId;
 
     function animate() {

@@ -1,18 +1,57 @@
 document.addEventListener("DOMContentLoaded", function () {
-    var next = document.getElementById('carrousel');
-    const fadersBase = document.querySelectorAll('.fade-in-base');
-    const fadersBottom = document.querySelectorAll('.fade-in-bottom');
-    const fadersTop = document.querySelectorAll('.fade-in-top');
-    const fadersLeft = document.querySelectorAll('.fade-in-left');
-    const fadersRight = document.querySelectorAll('.fade-in-right');
 
-    const options = {
-        threshold: 0.1
-    };
+    var next = document.getElementById('carrousel');
+    // const fadersBase = document.querySelectorAll('.fade-in-base');
+    // const fadersBottom = document.querySelectorAll('.fade-in-bottom');
+    // const fadersTop = document.querySelectorAll('.fade-in-top');
+    // const fadersLeft = document.querySelectorAll('.fade-in-left');
+    // const fadersRight = document.querySelectorAll('.fade-in-right');
+    const principalSection = document.getElementById('principal');
     const sections = ['principal', 'about', 'cat','projets', 'contact'];
     const scrollButtonA = document.getElementById('scroll-button');
     // const scrollButtonT = document.getElementById('scroll-button-top');
+    const scrollUpBtn = document.getElementById('scroll-button-top');
 
+    // const observer = new IntersectionObserver((entries) => {
+    //     entries.forEach(entry => {
+    //         if (entry.isIntersecting) {
+    //             entry.target.classList.add('visible');
+    //         }
+    //     });
+    // }, options);
+
+    // fadersBase.forEach(section => {
+    //     observer.observe(section);
+    // });
+
+    // fadersBottom.forEach(section => {
+    //     observer.observe(section);
+    // });
+
+    // fadersLeft.forEach(section => {
+    //     observer.observe(section);
+    // });
+
+    // fadersRight.forEach(section => {
+    //     observer.observe(section)
+    // });
+
+    // fadersTop.forEach(section => {
+    //     observer.observe(section);
+    // });
+
+    // Observer pour les éléments avec animation "fade-in"
+    const faders = [
+        ...document.querySelectorAll('.fade-in-base'),
+        ...document.querySelectorAll('.fade-in-bottom'),
+        ...document.querySelectorAll('.fade-in-top'),
+        ...document.querySelectorAll('.fade-in-left'),
+        ...document.querySelectorAll('.fade-in-right'),
+    ];
+
+    const observerOptions = {
+        threshold: 0.1
+    };
 
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
@@ -20,30 +59,13 @@ document.addEventListener("DOMContentLoaded", function () {
                 entry.target.classList.add('visible');
             }
         });
-    }, options);
+    }, observerOptions);
 
-    fadersBase.forEach(section => {
-        observer.observe(section);
-    });
+    // Observer chaque élément de la liste fusionnée
+    faders.forEach(el => observer.observe(el));
 
-    fadersBottom.forEach(section => {
-        observer.observe(section);
-    });
 
-    fadersLeft.forEach(section => {
-        observer.observe(section);
-    });
 
-    fadersRight.forEach(section => {
-        observer.observe(section)
-    });
-
-    fadersTop.forEach(section => {
-        observer.observe(section);
-    });
-
-    const scrollUpBtn = document.getElementById('scroll-button-top');
-    const principalSection = document.getElementById('principal');
     
     if (scrollUpBtn && principalSection) {
         const visibilityObserver = new IntersectionObserver((entries) => {
@@ -146,9 +168,17 @@ document.addEventListener("DOMContentLoaded", function () {
         }
 
         if (!nextSection) {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            if (window.lenis) {
+                window.lenis.scrollTo(0); // ✅ utilise lenis uniquement si dispo
+            } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            }
         } else {
-            nextSection.scrollIntoView({ behavior: 'smooth' });
+            if (window.lenis) {
+                window.lenis.scrollTo(nextSection);
+            } else {
+                nextSection.scrollIntoView({ behavior: "smooth" });
+            }
         }
     });
 
