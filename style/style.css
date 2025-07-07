@@ -638,6 +638,7 @@ section#projets {
     background-repeat: no-repeat;
     background-position: center;
     z-index: 0;
+    pointer-events: none;
 }
 
 
@@ -655,16 +656,16 @@ section#projets {
 .card-button {
     position: absolute;
     top: 140px;
-    z-index: 2;
+    z-index: 5555;
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
-
+/* 
 .card-button.hidden {
     opacity: 0;
-    pointer-events: none;
-}
+    pointer-events: auto;
+} */
 
 .btn-details-projet {
     padding: 12px;

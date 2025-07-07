@@ -1,13 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
     const slider = document.getElementById("slider");
 
-    // Duplique le contenu pour effet infini
     slider.innerHTML += slider.innerHTML;
 
     let position = 0;
-    let speed = 1.2; // vitesse normale
+    let speed = 1.2;
     const normalSpeed = 1.2;
-    const slowSpeed = normalSpeed * 0.05; // 5% = 95% de ralentissement
+    const slowSpeed = normalSpeed * 0.05;
     let animationFrameId;
 
     function animate() {
@@ -31,17 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const buttonWrapper = card.querySelector(".card-button");
         if (buttonWrapper) {
-            buttonWrapper.classList.remove("hidden");
+            // Affiche et active les clics
+            buttonWrapper.style.opacity = "1";
+            buttonWrapper.style.transform = "translateY(0)";
+            buttonWrapper.style.pointerEvents = "auto"; // ✅ clic activé
 
-            // Animation JS du bouton
-            buttonWrapper.style.opacity = "0";
-            buttonWrapper.style.transform = "translateY(10px)";
+            // Applique animation si besoin
             buttonWrapper.style.transition = "opacity 0.3s ease, transform 0.3s ease";
-
-            requestAnimationFrame(() => {
-                buttonWrapper.style.opacity = "1";
-                buttonWrapper.style.transform = "translateY(0)";
-            });
         }
     }
 
@@ -50,13 +45,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const buttonWrapper = card.querySelector(".card-button");
         if (buttonWrapper) {
+            // Réduit l’opacité et désactive les clics après anim
             buttonWrapper.style.opacity = "0";
             buttonWrapper.style.transform = "translateY(10px)";
-            setTimeout(() => {
-                buttonWrapper.classList.add("hidden");
-            }, 300); // Durée de la transition
+            buttonWrapper.style.pointerEvents = "none"; // ✅ clic désactivé
         }
     }
 
-    animate(); // démarrage du carrousel
+    animate();
 });
