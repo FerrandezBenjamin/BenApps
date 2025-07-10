@@ -12,33 +12,6 @@ document.addEventListener("DOMContentLoaded", function () {
     // const scrollButtonT = document.getElementById('scroll-button-top');
     const scrollUpBtn = document.getElementById('scroll-button-top');
 
-    // const observer = new IntersectionObserver((entries) => {
-    //     entries.forEach(entry => {
-    //         if (entry.isIntersecting) {
-    //             entry.target.classList.add('visible');
-    //         }
-    //     });
-    // }, options);
-
-    // fadersBase.forEach(section => {
-    //     observer.observe(section);
-    // });
-
-    // fadersBottom.forEach(section => {
-    //     observer.observe(section);
-    // });
-
-    // fadersLeft.forEach(section => {
-    //     observer.observe(section);
-    // });
-
-    // fadersRight.forEach(section => {
-    //     observer.observe(section)
-    // });
-
-    // fadersTop.forEach(section => {
-    //     observer.observe(section);
-    // });
 
     // Observer pour les éléments avec animation "fade-in"
     const faders = [

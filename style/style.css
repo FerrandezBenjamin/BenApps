@@ -23,12 +23,12 @@
 
 /* GESTION SCROSSBAR */
 
-html::-webkit-scrollbar,
+/* html::-webkit-scrollbar,
 body::-webkit-scrollbar {
   width: 0px;
   height: 0px;
   background: transparent;
-}
+} */
 
 
 html {
@@ -550,15 +550,31 @@ section#projets {
 .projets-title h2
 {
     font-size: clamp(2.5rem, 7vw, 4rem);
-    /* padding: 12px; */
-    /* width: 100%; */
+    width: 100%;
     font-weight: 400;
-    text-align: right;
+    text-align: center;
 }
+
+.projets-title-2
+{
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    color: black;
+    justify-content: center;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    width: 100%;
+    font-weight: 400;
+    text-align: center;
+
+}
+
 
 .all-projets {
   width: 100%;
-  overflow: hidden; 
+  position: relative;
 }
 
 
@@ -803,17 +819,44 @@ section#projets {
 
 .stack
 {
-    content: "";
+    display: flex;
+    flex-wrap: wrap;
+    /* position: sticky; */
+    /* top: 0; */
+    /* overflow-x: scroll; */
+    overflow-y: scroll;
+    gap: 15px;
+    justify-content: center;
     width: 100%;
-    /* height: 100px; */
+    height: 400px;
     flex-grow: 1;
-    text-align: center;
-    background-color: rgba(245, 222, 179, 0.779);
+    scroll-snap-type: x mandatory; /* Pour un effet fluide si souhaité */
+}
+
+.stack > * {
+    flex: 0 0 auto; /* Pour empêcher les enfants de s’étirer */
+    scroll-snap-align: start; /* Optionnel */
 }
 
 .stack img
 {
-    width: 80px;
+    width: 450px;
+    height: 550px;
+}
+
+.title-projet-perso
+{
+    background-color: rgba(245, 222, 179, 0.377);
+    /* width: clamp(340px, 85%, 1050px); */
+    /* width: 25%; */
+    padding: 12px;
+    display: flex;
+    width: 100%;
+    color: black;
+    justify-content: space-between;
+    text-align: center;
+    font-size: clamp(2.5rem, 7vw, 4rem);
+    height: 100px;  
 }
 
 
